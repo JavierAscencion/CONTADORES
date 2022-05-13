@@ -1,0 +1,18 @@
+[PROJECT]
+Target=CONTADOR_V1.0.hex
+Processor_Text=PIC18F4580
+CCSVersion=5.025
+Compiler=PCH
+[Target Data]
+FileList=CONTADOR_V1.0.c
+[CONTADOR_V1.0.c]
+Type=4
+[mru-list]
+1=CONTADOR_V1.0.c
+
+[Opened Files]
+1=CONTADOR_V1.0.c
+2=
+[Units]
+Count=1
+1=CONTADOR_V1.0 (main)
