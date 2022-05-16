@@ -1,7 +1,7 @@
-D G "__PCH__" 0 1823 ""5.025""
-D G "__DEVICE__" 0 1823 "4580"
-D G "__DATE__" 0 1823 ""16-may.-22""
-D G "__TIME__" 0 1823 ""09:50:51"" "Standard Header file for the PIC18F4580 device ////////////////"
+D G "__PCH__" 0 1798 ""5.025""
+D G "__DEVICE__" 0 1798 "4580"
+D G "__DATE__" 0 1798 ""16-may.-22""
+D G "__TIME__" 0 1798 ""12:03:37"" "Standard Header file for the PIC18F4580 device ////////////////"
 c L "set_tris_a" 1 3 6 "FUNCTION"
 v L "value" 1 43 "int8" `54 
 f B "set_tris_a" 1 43 "void(int8 value)" `53 
@@ -1358,499 +1358,482 @@ V L "status" 8 46 "int1" `953
 V L "address" 8 64 "int16" `955 
 F G "read_ext_eeprom" 8 64 "int8(int16 address)" `954 
 V L "data" 8 65 "int8" `956 
-D G "entrada01" 0 16 "PIN_B4" "SENSOR 1              2  1"
-D G "entrada02" 0 17 "PIN_D4" "SENSOR 2              4  3"
-D G "entrada03" 0 18 "PIN_B2" "SENSOR 3              6  5"
-D G "entrada04" 0 19 "PIN_B3" "SENSOR 4"
-D G "entrada05" 0 20 "PIN_B0" "SENSOR 5"
-D G "entrada06" 0 21 "PIN_B1" "SENSOR 6"
-D G "rst_cta" 0 23 "PIN_D3" "REINICIAR CONTADOR"
-D G "frente" 0 24 "PIN_D2" "/ INDICADOR DE MAESTRO"
-D G "B_silencio" 0 25 "PIN_D1" "/ BOTON PARA SILENCIAR (eliminado)"
-D G "salida01" 0 27 "PIN_C3" "Buzzer"
-D G "salida02" 0 28 "PIN_C4" "Indicador de Sensado"
-D G "salida03" 0 29 "PIN_C5" "Relay"
-D G "HB" 0 31 "PIN_E0" "habilita recepcion de datos en gprs  pin 25->D39"
-D G "EN" 0 32 "PIN_E1" "monitor de "envio listo" desde gprs  pin 26->D38"
-V G "s_cta" 0 34 "int8" `957 
-V G "size_s" 0 35 "int8" `959  "Tama�o de trama que espera leer el puerto serial (se utiliza para agilizar la captura de datos)"
-V G "error" 0 37 "int8" `960 
-V G "transmitir" 0 37 "int8" `961  "variable para indicar un error al escuchar la cuenta del poste trasero, bandera para inciar transmision a gprs"
-V G "sumae1" 0 39 "int8" `962 
-V G "sumas1" 0 39 "int8" `963  "Variables temporales de suma de entradas y salidas"
-V G "lim_b" 0 40 "int8" `964  "cuenta de sensores bloqueados"
-V G "fse1" 0 41 "int8" `965 
-V G "fse2" 0 41 "int8" `966 
-V G "fse3" 0 41 "int8" `967 
-V G "fss1" 0 41 "int8" `968 
-V G "fss2" 0 41 "int8" `969 
-V G "fss3" 0 41 "int8" `970  "banderas que indican si los pares de sensores detectaron entrada o salida"
-V G "temporal1" 0 42 "int16" `971 
-V G "temporal2" 0 42 "int16" `972 
-V G "tempo_tn" 0 42 "int16" `973 
-V G "sub_atras" 0 42 "int16" `974 
-V G "baj_atras" 0 42 "int16" `975  "variables temporales para hacer calculos."
-V G "entran1" 0 43 "int16" `976 
-V G "salen1" 0 43 "int16" `977  "variables temporales para hacer calculos."
-V G "salian" 0 45 "int16" `978 
-V G "time_clr" 0 45 "int16" `979  "variable temporal para guardar salidas"
-V G "ini" 0 46 "int8" `980 
-V G "i" 0 46 "int8" `981 
-V G "ii" 0 46 "int8" `982 
-V G "j" 0 46 "int8" `983 
-V G "a" 0 46 "int8" `984 
-V G "master" 0 46 "int8" `985 
-V G "flag_enviar" 0 46 "int8" `986 
-V G "f_clr" 0 46 "int8" `987 
-V G "b" 0 47 "int16" `988 
-V G "n" 0 47 "int16" `989 
-V G "cta_bloqueo" 0 47 "int16" `990 
-V G "cta_enviar" 0 47 "int16" `991 
-V G "total2_t" 0 47 "int16" `992  ",envia_ent,envia_sal;"
-V G "cta_bloq1" 0 48 "int8" `993 
-V G "cta_bloq2" 0 48 "int8" `994 
-V G "cta_bloq3" 0 48 "int8" `995 
-V G "ent1" 0 49 "int8" `996 
-V G "ent2" 0 49 "int8" `997 
-V G "ent3" 0 49 "int8" `998 
-V G "ent4" 0 49 "int8" `999 
-V G "ent5" 0 49 "int8" `1000 
-V G "ent6" 0 49 "int8" `1001 
-V G "sen_ent" 0 50 "int8" `1002 
-V G "sen_sal" 0 50 "int8" `1003 
-V G "sub_cta1" 0 51 "int16" `1004 
-V G "sub_cta2" 0 51 "int16" `1005 
-V G "sub_cta3" 0 51 "int16" `1006 
-V G "sub_cta4" 0 51 "int16" `1007 
-V G "sub_cta5" 0 51 "int16" `1008 
-V G "sub_cta6" 0 51 "int16" `1009 
-V G "detec1" 0 52 "int8" `1010 
-V G "detec2" 0 52 "int8" `1011 
-V G "detec3" 0 52 "int8" `1012 
-V G "detec4" 0 52 "int8" `1013 
-V G "detec5" 0 52 "int8" `1014 
-V G "detec6" 0 52 "int8" `1015  "variables para determinar el cambio de estado de los sensores"
-V G "sub_d1" 0 53 "int8" `1016 
-V G "sub_d2" 0 53 "int8" `1017 
-V G "sub_d3" 0 53 "int8" `1018 
-V G "sub_d4" 0 53 "int8" `1019 
-V G "sub_d5" 0 53 "int8" `1020 
-V G "sub_d6" 0 53 "int8" `1021  "variables para determinar el cambio de estado de los sensores"
-V G "entra_act1" 0 54 "int8" `1022 
-V G "edo1" 0 54 "int8" `1023 
-V G "entra1" 0 54 "int8" `1024 
-V G "sale1" 0 54 "int8" `1025 
-V G "edoa1" 0 54 "int8" `1026 
-V G "enable1" 0 54 "int8" `1027 
-V G "entra_temp1" 0 54 "int8" `1028 
-V G "entra_act2" 0 55 "int8" `1029 
-V G "edo2" 0 55 "int8" `1030 
-V G "entra2" 0 55 "int8" `1031 
-V G "sale2" 0 55 "int8" `1032 
-V G "edoa2" 0 55 "int8" `1033 
-V G "enable2" 0 55 "int8" `1034 
-V G "entra_temp2" 0 55 "int8" `1035 
-V G "entra_act3" 0 56 "int8" `1036 
-V G "edo3" 0 56 "int8" `1037 
-V G "entra3" 0 56 "int8" `1038 
-V G "sale3" 0 56 "int8" `1039 
-V G "edoa3" 0 56 "int8" `1040 
-V G "enable3" 0 56 "int8" `1041 
-V G "entra_temp3" 0 56 "int8" `1042 
-V G "entraront" 0 57 "int16" `1043 
-V G "salieront" 0 57 "int16" `1044 
-V G "pasaje" 0 57 "int16" `1045 
-V G "pasajet" 0 57 "int16" `1046 
-V G "tem_entraront" 0 58 "int16" `1047 
-V G "tem_salieront" 0 58 "int16" `1048 
-V G "temporal3" 0 58 "int16" `1049  "cuenta total de entradas y salidas recibidas de cuentas del poste trasero."
-V G "des1" 0 59 "int8" `1050 
-V G "des2" 0 59 "int8" `1051 
-V G "des3" 0 59 "int8" `1052 
-V G "bloq_p1" 0 60 "int8" `1053 
-V G "bloq_p2" 0 60 "int8" `1054 
-V G "bloq_p3" 0 60 "int8" `1055 
-V G "en_b1" 0 60 "int8" `1056 
-V G "en_b2" 0 60 "int8" `1057 
-V G "en_b3" 0 60 "int8" `1058 
-V G "tim_p1" 0 61 "int16" `1059 
-V G "tim_p2" 0 61 "int16" `1060 
-V G "tim_p3" 0 61 "int16" `1061 
-V G "segundoen" 0 61 "int16" `1062 
-V G "time_envio" 0 61 "int16" `1063 
-V G "set_timer" 0 62 "int32" `1064 
-V G "time_bloqueo" 0 63 "int16" `1066 
-V G "clear_lcd1" 0 64 "int8" `1068 
-V G "time_lcd1" 0 64 "int8" `1069 
-V G "y" 0 65 "int8" `1070 
-V G "bandera_revision" 0 66 "int8" `1071 
-V G "cntbnd" 0 67 "int16" `1072 
-V G "nuevo_pulso" 0 68 "int8" `1073 
-V G "time_s3" 0 69 "int8" `1074 
-V G "fls3" 0 70 "int8" `1075 
-V G "cta_pulsos" 0 71 "int8" `1076 
-V G "term" 0 74 "int8[3]" `1077 
-V G "ptr" 0 74 "*int8" `1078 
-V G "data1" 0 75 "int8[14]" `1079 
-V G "data2" 0 76 "int8[10]" `1080 
-V G "data3" 0 77 "int8[10]" `1081 
-V G "data4" 0 78 "int8[10]" `1082 
-V G "data5" 0 79 "int8[10]" `1083 
-V G "caso_valor" 0 80 "int8" `1084 
-V G "solicitud_reset_gps" 0 81 "int8" `1085 
-V G "textosearch" 0 84 "*int8[11]" `1086 
-V G "version" 0 96 "int8[1]" `1088 
-V G "word_size" 0 99 "int8" `1089 
-V G "data_set" 0 100 "int8" `1091 
-V G "XX" 0 102 "int8[32]" `1093  "ARREGLO SERIAL"
-V G "entran" 0 103 "int8[5]" `1094 
-V G "salen" 0 104 "int8[5]" `1095 
-V G "bloqueado" 0 105 "int8[5]" `1096 
-V G "memory" 0 106 "int8[10]" `1097  "*******************************//"
-V G "tempo_tc" 0 108 "int8[5]" `1098  "FUNCIONES/////////////"
-f G "rev_suben" 0 110 "void()" `1099 
-f G "cuenta_pulsos" 0 111 "void()" `1100 
-f G "rev_suben" 0 112 "void()" `1099 
-f G "enviop1" 0 113 "void()" `1101 
-f G "finsuma" 0 114 "void()" `1102 
-f G "leer_conta2" 0 115 "void()" `1103 
-f G "graba_conta2" 0 116 "void()" `1104  "int convertir_to_entero(char *cadena);"
-V L "command" 0 119 "*int8" `1106 
-f G "evaluar_string" 0 119 "int8(*int8 command)" `1105 
-f G "envia2" 0 120 "void()" `1108 
-f G "solicitar" 0 121 "void()" `1109 
-f G "envio_master" 0 122 "void()" `1110 
-f G "envio" 0 123 "void()" `1111 
-f G "limpiar" 0 124 "void()" `1112 
-f G "detecta_suma" 0 125 "void()" `1113 
-f G "write_ent" 0 126 "void()" `1114 
-f G "write_sal" 0 127 "void()" `1115 
-f G "entraron_total" 0 128 "void()" `1116 
-f G "salieron_total" 0 129 "void()" `1117  "void rd_eeprom();"
-f G "rd_eeprom_inicio" 0 131 "void()" `1118  "void llaves();"
-f G "lcd_cuentas" 0 134 "void()" `1119 
-f G "sentidos" 0 135 "void()" `1120 
-f G "sensores" 0 136 "void()" `1121 
-f G "sensando1" 0 137 "void()" `1122 
-f G "sensando2" 0 138 "void()" `1123 
-f G "sensando3" 0 139 "void()" `1124 
-f G "contando1" 0 140 "void()" `1125 
-f G "contando2" 0 141 "void()" `1126 
-f G "contando3" 0 142 "void()" `1127 
-f G "dar_dato" 0 143 "void()" `1128 
-f G "reset" 0 144 "void()" `1129  "Rutina de gesti�n de interrupciones"
-F G "TIMER1_isr" 0 150 "void()" `1130 
-C L "TIMER1_isr" 0 160 2 "*"
-C L "TIMER1_isr" 0 160 2 "FUNCTION"
-C L "TIMER1_isr" 0 160 1 "FUNCTION"
-C L "TIMER1_isr" 0 160 1 "FUNCTION"
-C L "TIMER1_isr" 0 160 1 "FUNCTION"
-C L "TIMER1_isr" 0 160 1 "FUNCTION"
-C L "TIMER1_isr" 0 185 1 "*"
-C L "TIMER1_isr" 0 185 1 "FUNCTION"
-C L "TIMER3_isr" 0 192 2 "*"
-F G "TIMER3_isr" 0 198 "void()" `1131 
-C L "TIMER3_isr" 0 192 1 "FUNCTION"
-C L "isr_rs232" 0 192 1 "FUNCTION"
-F G "isr_rs232" 0 207 "void()" `1132  "escucha segundo poste"
-C L "isr_rs232" 0 192 1 "FUNCTION"
-C L "isr_rs232" 0 192 1 "FUNCTION"
-C L "isr_rs232" 0 192 1 "FUNCTION"
-C L "isr_rs232" 0 192 1 "FUNCTION"
-F G "MAIN" 0 224 "void()" `1133  "Apaga entradas analogicas"
-C L "MAIN" 0 192 1 "FUNCTION"
-C L "MAIN" 0 192 1 "FUNCTION"
-C L "MAIN" 0 192 1 "FUNCTION"
-C L "MAIN" 0 192 1 "FUNCTION"
-C L "MAIN" 0 192 1 "FUNCTION"
-C L "MAIN" 0 192 1 "FUNCTION"
-C L "MAIN" 0 192 3 "FUNCTION"
-C L "MAIN" 0 192 1 "FUNCTION"
-C L "MAIN" 0 192 2 "FUNCTION"
-C L "MAIN" 0 192 1 "FUNCTION"
-C L "MAIN" 0 192 1 "FUNCTION"
-C L "MAIN" 0 192 1 "FUNCTION"
-C L "MAIN" 0 192 1 "FUNCTION"
-C L "MAIN" 0 192 1 "FUNCTION"
-C L "MAIN" 0 192 1 "FUNCTION"
-C L "MAIN" 0 192 1 "FUNCTION"
-C L "MAIN" 0 192 1 "FUNCTION"
-C L "MAIN" 0 192 1 "FUNCTION"
-C L "MAIN" 0 192 1 "FUNCTION"
-C L "MAIN" 0 192 1 "FUNCTION"
-C L "MAIN" 0 192 1 "FUNCTION"
-C L "MAIN" 0 192 1 "FUNCTION"
-C L "MAIN" 0 192 1 "FUNCTION"
-C L "MAIN" 0 192 1 "FUNCTION"
-C L "MAIN" 0 192 1 "FUNCTION"
-V L "tem_res" 0 270 "int8" `1136 
-C L "MAIN" 0 192 1 "FUNCTION"
-C L "MAIN" 0 192 1 "FUNCTION"
-C L "MAIN" 0 192 1 "FUNCTION"
-C L "MAIN" 0 192 1 "FUNCTION"
-C L "MAIN" 0 192 1 "FUNCTION"
-C L "MAIN" 0 192 1 "FUNCTION"
-C L "MAIN" 0 192 1 "FUNCTION"
-C L "MAIN" 0 192 1 "FUNCTION"
-C L "MAIN" 0 192 1 "FUNCTION"
-C L "MAIN" 0 192 1 "FUNCTION"
-C L "MAIN" 0 192 1 "FUNCTION"
-C L "MAIN" 0 192 1 "FUNCTION"
-C L "MAIN" 0 192 1 "FUNCTION"
-C L "MAIN" 0 192 1 "FUNCTION"
-C L "MAIN" 0 192 2 "FUNCTION"
-C L "MAIN" 0 192 1 "FUNCTION"
-C L "MAIN" 0 192 1 "FUNCTION"
-C L "MAIN" 0 192 1 "FUNCTION"
-C L "MAIN" 0 192 1 "FUNCTION"
-C L "MAIN" 0 192 2 "FUNCTION"
-C L "MAIN" 0 192 1 "FUNCTION"
-C L "MAIN" 0 192 1 "FUNCTION"
-C L "MAIN" 0 192 1 "FUNCTION"
-C L "MAIN" 0 192 1 "FUNCTION"
-C L "MAIN" 0 192 1 "FUNCTION"
-C L "MAIN" 0 192 1 "FUNCTION"
-C L "MAIN" 0 192 1 "FUNCTION"
-C L "MAIN" 0 192 1 "FUNCTION"
-C L "MAIN" 0 192 1 "FUNCTION"
-C L "MAIN" 0 192 1 "FUNCTION"
-C L "MAIN" 0 192 1 "FUNCTION"
-C L "MAIN" 0 192 1 "FUNCTION"
-C L "MAIN" 0 192 1 "FUNCTION"
-C L "MAIN" 0 192 1 "FUNCTION"
-C L "MAIN" 0 192 1 "FUNCTION"
-C L "MAIN" 0 192 1 "FUNCTION"
-C L "MAIN" 0 192 1 "FUNCTION"
-C L "MAIN" 0 192 1 "FUNCTION"
-C L "MAIN" 0 192 1 "FUNCTION"
-C L "MAIN" 0 192 1 "FUNCTION"
-C L "MAIN" 0 192 1 "FUNCTION"
-C L "MAIN" 0 192 1 "FUNCTION"
-C L "MAIN" 0 192 1 "FUNCTION"
-C L "MAIN" 0 192 1 "FUNCTION"
-C L "MAIN" 0 192 1 "FUNCTION"
-C L "MAIN" 0 192 1 "FUNCTION"
-C L "MAIN" 0 192 1 "FUNCTION"
-C L "MAIN" 0 192 1 "FUNCTION"
-C L "MAIN" 0 192 1 "FUNCTION"
-C L "MAIN" 0 192 1 "FUNCTION"
-C L "MAIN" 0 192 1 "FUNCTION"
-C L "MAIN" 0 192 1 "FUNCTION"
-C L "MAIN" 0 192 2 "FUNCTION"
-C L "MAIN" 0 192 1 "FUNCTION"
-C L "MAIN" 0 192 1 "FUNCTION"
-C L "MAIN" 0 192 1 "FUNCTION"
-C L "MAIN" 0 192 1 "FUNCTION"
-C L "solicitar" 0 192 1 "FUNCTION"
-F G "solicitar" 0 540 "void()" `1109  "Solicita cuenta al poste esclavo"
-F G "envio_master" 0 548 "void()" `1110  "reporta al maestro"
-V L "envit" 0 549 "int16" `1172 
-C L "envio_master" 0 192 1 "FUNCTION"
-C L "envio_master" 0 192 1 "FUNCTION"
-C L "enviop1" 0 192 23 "FUNCTION"
-F G "enviop1" 0 589 "void()" `1101  "Convierte a enteros la cadena recibida por el poste esclavo"
-C L "enviop1" 0 192 1 "FUNCTION"
-C L "enviop1" 0 192 1 "FUNCTION"
-C L "enviop1" 0 192 1 "FUNCTION"
-C L "enviop1" 0 192 1 "FUNCTION"
-V L "conteo_wl" 0 607 "int8" `1175 
-C L "enviop1" 0 192 1 "FUNCTION"
-C L "enviop1" 0 192 1 "FUNCTION"
-C L "enviop1" 0 192 1 "FUNCTION"
-C L "enviop1" 0 192 1 "FUNCTION"
-C L "enviop1" 0 192 1 "FUNCTION"
-F G "envio" 0 629 "void()" `1111  "crea paquete para enviar al modulo GPRS"
-C L "envio" 0 192 1 "FUNCTION"
-C L "envio" 0 192 1 "FUNCTION"
-C L "envio" 0 192 1 "FUNCTION"
-C L "envio" 0 192 1 "FUNCTION"
-C L "envio" 0 192 1 "FUNCTION"
-F G "envia2" 0 666 "void()" `1108  "Crea paquete para enviar a modulo GPRS cuando no hay conexion con esclavo"
-C L "envia2" 0 192 1 "FUNCTION"
-C L "envia2" 0 192 1 "FUNCTION"
-C L "envia2" 0 192 1 "FUNCTION"
-C L "envia2" 0 192 1 "FUNCTION"
-C L "envia2" 0 192 2 "FUNCTION"
-C L "envia2" 0 192 1 "FUNCTION"
-C L "envia2" 0 192 1 "FUNCTION"
-C L "envia2" 0 192 1 "FUNCTION"
-F G "limpiar" 0 695 "void()" `1112  "borra cuentas de subidas, bajadas y bloqueos"
-C L "limpiar" 0 192 1 "FUNCTION"
-C L "limpiar" 0 192 1 "FUNCTION"
-C L "limpiar" 0 192 1 "FUNCTION"
-F G "detecta_suma" 0 719 "void()" `1113  "Realiza suma de entradas o salidas"
-C L "detecta_suma" 0 192 1 "FUNCTION"
-C L "detecta_suma" 0 192 2 "FUNCTION"
-C L "detecta_suma" 0 192 1 "FUNCTION"
-C L "detecta_suma" 0 192 1 "FUNCTION"
-C L "detecta_suma" 0 192 1 "FUNCTION"
-C L "detecta_suma" 0 192 1 "FUNCTION"
-C L "detecta_suma" 0 192 1 "FUNCTION"
-C L "detecta_suma" 0 192 1 "FUNCTION"
-C L "detecta_suma" 0 192 1 "FUNCTION"
-C L "detecta_suma" 0 192 1 "FUNCTION"
-C L "detecta_suma" 0 192 1 "FUNCTION"
-C L "detecta_suma" 0 192 1 "FUNCTION"
-C L "detecta_suma" 0 192 1 "FUNCTION"
-C L "detecta_suma" 0 192 1 "FUNCTION"
-C L "detecta_suma" 0 192 1 "FUNCTION"
-C L "detecta_suma" 0 192 1 "FUNCTION"
-C L "detecta_suma" 0 192 1 "FUNCTION"
-C L "detecta_suma" 0 192 1 "FUNCTION"
-C L "detecta_suma" 0 192 1 "FUNCTION"
-C L "detecta_suma" 0 192 1 "FUNCTION"
-C L "detecta_suma" 0 192 1 "FUNCTION"
-C L "detecta_suma" 0 192 1 "FUNCTION"
-C L "detecta_suma" 0 192 1 "FUNCTION"
-C L "detecta_suma" 0 192 2 "FUNCTION"
-C L "detecta_suma" 0 192 1 "FUNCTION"
-C L "detecta_suma" 0 192 1 "FUNCTION"
-C L "detecta_suma" 0 192 1 "FUNCTION"
-C L "detecta_suma" 0 192 1 "FUNCTION"
-F G "finsuma" 0 841 "void()" `1102  "Pinta en LCD la nueva cifra de entrada o salida"
-F G "contando1" 0 852 "void()" `1125  "Revisa maquina de estados para par 1"
-C L "contando1" 0 192 1 "FUNCTION"
-C L "contando1" 0 192 1 "FUNCTION"
-C L "contando1" 0 192 1 "FUNCTION"
-C L "contando1" 0 192 1 "FUNCTION"
-C L "contando1" 0 192 1 "FUNCTION"
-C L "contando1" 0 192 1 "FUNCTION"
-C L "contando1" 0 192 1 "FUNCTION"
-C L "contando1" 0 192 1 "FUNCTION"
-F G "contando2" 0 905 "void()" `1126  "Revisa maquina de estados para par 2"
-C L "contando2" 0 192 1 "FUNCTION"
-C L "contando2" 0 192 1 "FUNCTION"
-C L "contando2" 0 192 1 "FUNCTION"
-C L "contando2" 0 192 1 "FUNCTION"
-C L "contando2" 0 192 1 "FUNCTION"
-C L "contando2" 0 192 1 "FUNCTION"
-F G "contando3" 0 958 "void()" `1127  "Revisa maquina de estados para par 3"
-C L "contando3" 0 192 1 "FUNCTION"
-C L "contando3" 0 192 1 "FUNCTION"
-C L "contando3" 0 192 1 "FUNCTION"
-C L "contando3" 0 192 1 "FUNCTION"
-C L "contando3" 0 192 1 "FUNCTION"
-C L "contando3" 0 192 1 "FUNCTION"
-F G "sensando1" 0 1011 "void()" `1122  "Define estados para la maquina de estados del par 1"
-C L "sensando1" 0 192 1 "FUNCTION"
-C L "sensando1" 0 192 1 "FUNCTION"
-C L "sensando1" 0 192 1 "FUNCTION"
-C L "sensando1" 0 192 1 "FUNCTION"
-C L "sensando1" 0 192 1 "FUNCTION"
-C L "sensando1" 0 192 1 "FUNCTION"
-C L "sensando1" 0 192 1 "FUNCTION"
-C L "sensando1" 0 192 1 "FUNCTION"
-C L "sensando1" 0 192 1 "FUNCTION"
-C L "sensando1" 0 192 2 "FUNCTION"
-C L "sensando1" 0 192 1 "FUNCTION"
-C L "sensando1" 0 192 1 "FUNCTION"
-C L "sensando1" 0 192 1 "FUNCTION"
-C L "sensando1" 0 192 1 "FUNCTION"
-C L "sensando1" 0 192 1 "FUNCTION"
-C L "sensando1" 0 192 1 "FUNCTION"
-C L "sensando1" 0 192 1 "FUNCTION"
-F G "sensando2" 0 1137 "void()" `1123  "Define estados para la maquina de estados del par 2"
-C L "sensando2" 0 192 1 "FUNCTION"
-C L "sensando2" 0 192 1 "FUNCTION"
-C L "sensando2" 0 192 1 "FUNCTION"
-C L "sensando2" 0 192 1 "FUNCTION"
-C L "sensando2" 0 192 1 "FUNCTION"
-C L "sensando2" 0 192 1 "FUNCTION"
-C L "sensando2" 0 192 1 "FUNCTION"
-C L "sensando2" 0 192 2 "FUNCTION"
-C L "sensando2" 0 192 1 "FUNCTION"
-C L "sensando2" 0 192 1 "FUNCTION"
-C L "sensando2" 0 192 1 "FUNCTION"
-C L "sensando2" 0 192 1 "FUNCTION"
-C L "sensando2" 0 192 1 "FUNCTION"
-C L "sensando2" 0 192 1 "FUNCTION"
-C L "sensando2" 0 192 1 "FUNCTION"
-F G "sensando3" 0 1262 "void()" `1124  "Define estados para la maquina de estados del par 3"
-C L "sensando3" 0 192 1 "FUNCTION"
-C L "sensando3" 0 192 1 "FUNCTION"
-C L "sensando3" 0 192 1 "FUNCTION"
-C L "sensando3" 0 192 1 "FUNCTION"
-C L "sensando3" 0 192 1 "FUNCTION"
-C L "sensando3" 0 192 1 "FUNCTION"
-C L "sensando3" 0 192 1 "FUNCTION"
-C L "sensando3" 0 192 1 "FUNCTION"
-C L "sensando3" 0 192 2 "FUNCTION"
-C L "sensando3" 0 192 1 "FUNCTION"
-C L "sensando3" 0 192 1 "FUNCTION"
-C L "sensando3" 0 192 1 "FUNCTION"
-C L "sensando3" 0 192 1 "FUNCTION"
-C L "sensando3" 0 192 1 "FUNCTION"
-C L "sensando3" 0 192 1 "FUNCTION"
-C L "sensando3" 0 192 1 "FUNCTION"
-F G "sensores" 0 1388 "void()" `1121  "Detecta estado (bloqueado o libre) de los sensores"
-C L "sensores" 0 192 1 "FUNCTION"
-C L "sensores" 0 192 1 "FUNCTION"
-C L "sensores" 0 192 1 "FUNCTION"
-C L "sensores" 0 192 1 "FUNCTION"
-C L "sensores" 0 192 1 "FUNCTION"
-C L "sensores" 0 192 1 "FUNCTION"
-C L "sensores" 0 192 1 "FUNCTION"
-C L "sensores" 0 192 1 "FUNCTION"
-C L "sensores" 0 192 1 "FUNCTION"
-C L "sensores" 0 192 1 "FUNCTION"
-C L "sensores" 0 192 1 "FUNCTION"
-C L "sensores" 0 192 1 "FUNCTION"
-C L "sensores" 0 192 1 "FUNCTION"
-C L "sensores" 0 192 1 "FUNCTION"
-C L "sensores" 0 192 1 "FUNCTION"
-C L "sensores" 0 192 1 "FUNCTION"
-C L "sensores" 0 192 1 "FUNCTION"
-C L "sensores" 0 192 1 "FUNCTION"
-C L "sensores" 0 192 1 "FUNCTION"
-C L "sensores" 0 192 1 "FUNCTION"
-C L "sensores" 0 192 1 "FUNCTION"
-C L "sentidos" 0 192 1 "FUNCTION"
-F G "sentidos" 0 1582 "void()" `1120  "Define si la persona esta entrando o saliendo"
-C L "sentidos" 0 192 2 "FUNCTION"
-C L "sentidos" 0 192 2 "FUNCTION"
-C L "rd_eeprom_inicio" 0 192 21 "FUNCTION"
-F G "rd_eeprom_inicio" 0 1629 "void()" `1118  ""
-C L "rd_eeprom_inicio" 0 192 1 "FUNCTION"
-C L "rd_eeprom_inicio" 0 192 1 "FUNCTION"
-C L "rd_eeprom_inicio" 0 192 1 "FUNCTION"
-F G "lcd_cuentas" 0 1650 "void()" `1119  "Escribe las cuenta en LCD"
-F G "write_ent" 0 1679 "void()" `1114  "Graba en eeprom las subidas del poste"
-C L "write_ent" 0 192 1 "FUNCTION"
-C L "write_ent" 0 192 1 "FUNCTION"
-F G "write_sal" 0 1688 "void()" `1115  "Graba en eeprom las bajadas del poste"
-C L "write_sal" 0 192 1 "FUNCTION"
-C L "write_sal" 0 192 1 "FUNCTION"
-F G "entraron_total" 0 1697 "void()" `1116  "Graba en eeprom el total de subidas"
-V L "reg_h" 0 1699 "int8" `1228 
-V L "reg_l" 0 1699 "int8" `1229 
-V L "total" 0 1700 "int16" `1230 
-F G "salieron_total" 0 1711 "void()" `1117  "Graba en eeprom el total de bajadas"
-V L "reg_h" 0 1713 "int8" `1231 
-V L "reg_l" 0 1713 "int8" `1232 
-V L "total" 0 1714 "int16" `1233 
-F G "graba_conta2" 0 1725 "void()" `1104  "Graba en eeprom el total de pasajes de poste esclavo"
-V L "reg_hc" 0 1727 "int8" `1234 
-V L "reg_lc" 0 1727 "int8" `1235 
-V L "totalc" 0 1728 "int16" `1236 
-F G "leer_conta2" 0 1742 "void()" `1103  "Carga de eeprom el total de pasajes de poste esclavo"
-V L "reg_hc" 0 1744 "int8" `1237 
-V L "reg_lc" 0 1744 "int8" `1238 
-V L "totalc" 0 1745 "int16" `1239 
-F G "reset" 0 1757 "void()" `1129 
-C L "reset" 0 192 1 "FUNCTION"
-C L "reset" 0 192 1 "FUNCTION"
-C L "reset" 0 192 1 "FUNCTION"
-C L "reset" 0 192 1 "FUNCTION"
-C L "evaluar_string" 0 192 1 "FUNCTION"
-V L "command" 0 1781 "*int8" `1242 
-F G "evaluar_string" 0 1782 "int8(*int8 command)" `1105 
-V L "conteo_command" 0 1783 "int8" `1241 
-V L "iresult" 0 1784 "int8" `1242  "recorremos los 11 comandos definidos en textosearxch[] ////////"
-C L "evaluar_string" 0 192 1 "FUNCTION"
-C L "evaluar_string" 0 192 1 "FUNCTION"
-C L "evaluar_string" 0 192 1 "FUNCTION"
-F G "cuenta_pulsos" 0 1807 "void()" `1100  "Pulsos de subida para impresion (flanco alto)"
-F G "rev_suben" 0 1816 "void()" `1099 
+D G "entrada01" 0 14 "PIN_B4" "SENSOR 1              2  1"
+D G "entrada02" 0 15 "PIN_D4" "SENSOR 2              4  3"
+D G "entrada03" 0 16 "PIN_B2" "SENSOR 3              6  5"
+D G "entrada04" 0 17 "PIN_B3" "SENSOR 4"
+D G "entrada05" 0 18 "PIN_B0" "SENSOR 5"
+D G "entrada06" 0 19 "PIN_B1" "SENSOR 6"
+D G "rst_cta" 0 21 "PIN_D3" "REINICIAR CONTADOR"
+D G "frente" 0 22 "PIN_D2" "/ INDICADOR DE MAESTRO"
+D G "B_silencio" 0 23 "PIN_D1" "/ BOTON PARA SILENCIAR (eliminado)"
+D G "salida01" 0 25 "PIN_C3" "Buzzer"
+D G "salida02" 0 26 "PIN_C4" "Indicador de Sensado"
+D G "salida03" 0 27 "PIN_C5" "Relay"
+V G "s_cta" 0 28 "int8" `957 
+V G "size_s" 0 29 "int8" `959  "Tama�o de trama que espera leer el puerto serial (se utiliza para agilizar la captura de datos)"
+V G "error" 0 31 "int8" `960 
+V G "transmitir" 0 31 "int8" `961  "variable para indicar un error al escuchar la cuenta del poste trasero, bandera para inciar transmision a gprs"
+V G "sumae1" 0 33 "int8" `962 
+V G "sumas1" 0 33 "int8" `963  "Variables temporales de suma de entradas y salidas"
+V G "lim_b" 0 34 "int8" `964  "cuenta de sensores bloqueados"
+V G "fse1" 0 35 "int8" `965 
+V G "fse2" 0 35 "int8" `966 
+V G "fse3" 0 35 "int8" `967 
+V G "fss1" 0 35 "int8" `968 
+V G "fss2" 0 35 "int8" `969 
+V G "fss3" 0 35 "int8" `970  "banderas que indican si los pares de sensores detectaron entrada o salida"
+V G "temporal1" 0 36 "int16" `971 
+V G "temporal2" 0 36 "int16" `972 
+V G "tempo_tn" 0 36 "int16" `973 
+V G "sub_atras" 0 36 "int16" `974 
+V G "baj_atras" 0 36 "int16" `975  "variables temporales para hacer calculos."
+V G "entran1" 0 37 "int16" `976 
+V G "salen1" 0 37 "int16" `977  "variables temporales para hacer calculos."
+V G "salian" 0 39 "int16" `978 
+V G "time_clr" 0 39 "int16" `979  "variable temporal para guardar salidas"
+V G "ini" 0 40 "int8" `980 
+V G "i" 0 40 "int8" `981 
+V G "ii" 0 40 "int8" `982 
+V G "j" 0 40 "int8" `983 
+V G "a" 0 40 "int8" `984 
+V G "master" 0 40 "int8" `985 
+V G "flag_enviar" 0 40 "int8" `986 
+V G "f_clr" 0 40 "int8" `987 
+V G "b" 0 41 "int16" `988 
+V G "n" 0 41 "int16" `989 
+V G "cta_bloqueo" 0 41 "int16" `990 
+V G "cta_enviar" 0 41 "int16" `991 
+V G "total2_t" 0 41 "int16" `992  ",envia_ent,envia_sal;"
+V G "cta_bloq1" 0 42 "int8" `993 
+V G "cta_bloq2" 0 42 "int8" `994 
+V G "cta_bloq3" 0 42 "int8" `995 
+V G "ent1" 0 43 "int8" `996 
+V G "ent2" 0 43 "int8" `997 
+V G "ent3" 0 43 "int8" `998 
+V G "ent4" 0 43 "int8" `999 
+V G "ent5" 0 43 "int8" `1000 
+V G "ent6" 0 43 "int8" `1001 
+V G "sen_ent" 0 44 "int8" `1002 
+V G "sen_sal" 0 44 "int8" `1003 
+V G "sub_cta1" 0 45 "int16" `1004 
+V G "sub_cta2" 0 45 "int16" `1005 
+V G "sub_cta3" 0 45 "int16" `1006 
+V G "sub_cta4" 0 45 "int16" `1007 
+V G "sub_cta5" 0 45 "int16" `1008 
+V G "sub_cta6" 0 45 "int16" `1009 
+V G "detec1" 0 46 "int8" `1010 
+V G "detec2" 0 46 "int8" `1011 
+V G "detec3" 0 46 "int8" `1012 
+V G "detec4" 0 46 "int8" `1013 
+V G "detec5" 0 46 "int8" `1014 
+V G "detec6" 0 46 "int8" `1015  "variables para determinar el cambio de estado de los sensores"
+V G "sub_d1" 0 47 "int8" `1016 
+V G "sub_d2" 0 47 "int8" `1017 
+V G "sub_d3" 0 47 "int8" `1018 
+V G "sub_d4" 0 47 "int8" `1019 
+V G "sub_d5" 0 47 "int8" `1020 
+V G "sub_d6" 0 47 "int8" `1021  "variables para determinar el cambio de estado de los sensores"
+V G "entra_act1" 0 48 "int8" `1022 
+V G "edo1" 0 48 "int8" `1023 
+V G "entra1" 0 48 "int8" `1024 
+V G "sale1" 0 48 "int8" `1025 
+V G "edoa1" 0 48 "int8" `1026 
+V G "enable1" 0 48 "int8" `1027 
+V G "entra_temp1" 0 48 "int8" `1028 
+V G "entra_act2" 0 49 "int8" `1029 
+V G "edo2" 0 49 "int8" `1030 
+V G "entra2" 0 49 "int8" `1031 
+V G "sale2" 0 49 "int8" `1032 
+V G "edoa2" 0 49 "int8" `1033 
+V G "enable2" 0 49 "int8" `1034 
+V G "entra_temp2" 0 49 "int8" `1035 
+V G "entra_act3" 0 50 "int8" `1036 
+V G "edo3" 0 50 "int8" `1037 
+V G "entra3" 0 50 "int8" `1038 
+V G "sale3" 0 50 "int8" `1039 
+V G "edoa3" 0 50 "int8" `1040 
+V G "enable3" 0 50 "int8" `1041 
+V G "entra_temp3" 0 50 "int8" `1042 
+V G "entraront" 0 51 "int16" `1043 
+V G "salieront" 0 51 "int16" `1044 
+V G "pasaje" 0 51 "int16" `1045 
+V G "pasajet" 0 51 "int16" `1046 
+V G "tem_entraront" 0 52 "int16" `1047 
+V G "tem_salieront" 0 52 "int16" `1048 
+V G "temporal3" 0 52 "int16" `1049  "cuenta total de entradas y salidas recibidas de cuentas del poste trasero."
+V G "des1" 0 53 "int8" `1050 
+V G "des2" 0 53 "int8" `1051 
+V G "des3" 0 53 "int8" `1052 
+V G "bloq_p1" 0 54 "int8" `1053 
+V G "bloq_p2" 0 54 "int8" `1054 
+V G "bloq_p3" 0 54 "int8" `1055 
+V G "en_b1" 0 54 "int8" `1056 
+V G "en_b2" 0 54 "int8" `1057 
+V G "en_b3" 0 54 "int8" `1058 
+V G "tim_p1" 0 55 "int16" `1059 
+V G "tim_p2" 0 55 "int16" `1060 
+V G "tim_p3" 0 55 "int16" `1061 
+V G "segundoen" 0 55 "int16" `1062 
+V G "time_envio" 0 55 "int16" `1063 
+V G "set_timer" 0 56 "int32" `1064 
+V G "time_bloqueo" 0 57 "int16" `1066 
+V G "clear_lcd1" 0 58 "int8" `1068 
+V G "time_lcd1" 0 58 "int8" `1069 
+V G "y" 0 59 "int8" `1070 
+V G "nuevo_pulso" 0 60 "int8" `1071 
+V G "time_s3" 0 61 "int8" `1072 
+V G "fls3" 0 62 "int8" `1073 
+V G "cta_pulsos" 0 63 "int8" `1074 
+V G "textosearch" 0 67 "*int8[11]" `1075 
+V G "version" 0 81 "int8[1]" `1077 
+V G "word_size" 0 84 "int8" `1078 
+V G "data_set" 0 85 "int8" `1080 
+V G "XX" 0 86 "int8[29]" `1082  "ARREGLO SERIAL"
+V G "entran" 0 87 "int8[4]" `1083 
+V G "salen" 0 88 "int8[4]" `1084 
+V G "bloqueado" 0 89 "int8[3]" `1085 
+V G "memory" 0 90 "int8[10]" `1086  "*******************************//"
+V G "tempo_tc" 0 92 "int8[4]" `1087  "FUNCIONES/////////////"
+C L "cuenta_pulsos" 0 13 1 "FUNCTION"
+f G "cuenta_pulsos" 0 95 "void()" `1088 
+f G "rev_suben" 0 96 "void()" `1089 
+f G "enviop1" 0 97 "void()" `1090 
+f G "finsuma" 0 98 "void()" `1091 
+f G "leer_conta2" 0 99 "void()" `1092 
+f G "graba_conta2" 0 100 "void()" `1093 
+V L "cadena" 0 102 "*int8" `1095 
+f G "convertir_to_entero" 0 102 "int8(*int8 cadena)" `1094 
+V L "command" 0 103 "*int8" `1097 
+f G "evaluar_string" 0 103 "int8(*int8 command)" `1096 
+f G "envia2" 0 104 "void()" `1099 
+f G "solicitar" 0 105 "void()" `1100 
+f G "envio_master" 0 106 "void()" `1101 
+f G "envio" 0 107 "void()" `1102 
+f G "limpiar" 0 108 "void()" `1103 
+f G "detecta_suma" 0 109 "void()" `1104 
+f G "write_ent" 0 110 "void()" `1105 
+f G "write_sal" 0 111 "void()" `1106 
+f G "entraron_total" 0 112 "void()" `1107 
+f G "salieron_total" 0 113 "void()" `1108 
+f G "rd_eeprom" 0 114 "void()" `1109 
+f G "rd_eeprom_inicio" 0 115 "void()" `1110  "void llaves();"
+f G "lcd_cuentas" 0 118 "void()" `1111 
+f G "sentidos" 0 119 "void()" `1112 
+f G "sensores" 0 120 "void()" `1113 
+f G "sensando1" 0 121 "void()" `1114 
+f G "sensando2" 0 122 "void()" `1115 
+f G "sensando3" 0 123 "void()" `1116 
+f G "contando1" 0 124 "void()" `1117 
+f G "contando2" 0 125 "void()" `1118 
+f G "contando3" 0 126 "void()" `1119 
+f G "dar_dato" 0 127 "void()" `1120 
+f G "reset" 0 128 "void()" `1121  "Rutina de gesti�n de interrupciones"
+F G "TIMER1_isr" 0 134 "void()" `1122 
+C L "TIMER1_isr" 0 144 2 "*"
+C L "TIMER1_isr" 0 144 2 "FUNCTION"
+C L "TIMER1_isr" 0 144 1 "FUNCTION"
+C L "TIMER1_isr" 0 144 1 "FUNCTION"
+C L "TIMER1_isr" 0 144 1 "FUNCTION"
+C L "TIMER1_isr" 0 144 1 "FUNCTION"
+C L "TIMER1_isr" 0 169 1 "*"
+C L "TIMER1_isr" 0 169 1 "FUNCTION"
+C L "isr_rs232" 0 176 1 "*"
+F G "isr_rs232" 0 180 "void()" `1123  "escucha segundo poste"
+C L "isr_rs232" 0 176 1 "FUNCTION"
+C L "isr_rs232" 0 176 1 "FUNCTION"
+C L "isr_rs232" 0 176 1 "FUNCTION"
+F G "MAIN" 0 198 "void()" `1124  "Apaga entradas analogicas"
+C L "MAIN" 0 176 1 "FUNCTION"
+C L "MAIN" 0 176 1 "FUNCTION"
+C L "MAIN" 0 176 1 "FUNCTION"
+C L "MAIN" 0 176 1 "FUNCTION"
+C L "MAIN" 0 176 1 "FUNCTION"
+C L "MAIN" 0 176 1 "FUNCTION"
+C L "MAIN" 0 176 3 "FUNCTION"
+C L "MAIN" 0 176 1 "FUNCTION"
+C L "MAIN" 0 176 2 "FUNCTION"
+C L "MAIN" 0 176 1 "FUNCTION"
+C L "MAIN" 0 176 1 "FUNCTION"
+C L "MAIN" 0 176 1 "FUNCTION"
+C L "MAIN" 0 176 1 "FUNCTION"
+C L "MAIN" 0 176 1 "FUNCTION"
+C L "MAIN" 0 176 3 "FUNCTION"
+C L "MAIN" 0 176 1 "FUNCTION"
+C L "MAIN" 0 176 1 "FUNCTION"
+C L "MAIN" 0 176 1 "FUNCTION"
+C L "MAIN" 0 176 1 "FUNCTION"
+C L "MAIN" 0 176 1 "FUNCTION"
+C L "MAIN" 0 176 1 "FUNCTION"
+C L "MAIN" 0 176 1 "FUNCTION"
+C L "MAIN" 0 176 1 "FUNCTION"
+C L "MAIN" 0 176 1 "FUNCTION"
+C L "MAIN" 0 176 1 "FUNCTION"
+C L "MAIN" 0 176 1 "FUNCTION"
+V L "tem_res" 0 248 "int8" `1127 
+C L "MAIN" 0 176 1 "FUNCTION"
+C L "MAIN" 0 176 1 "FUNCTION"
+C L "MAIN" 0 176 1 "FUNCTION"
+C L "MAIN" 0 176 1 "FUNCTION"
+C L "MAIN" 0 176 3 "FUNCTION"
+C L "MAIN" 0 176 2 "FUNCTION"
+C L "MAIN" 0 176 1 "FUNCTION"
+C L "MAIN" 0 176 1 "FUNCTION"
+C L "MAIN" 0 176 1 "FUNCTION"
+C L "MAIN" 0 176 1 "FUNCTION"
+C L "MAIN" 0 176 1 "FUNCTION"
+C L "MAIN" 0 176 1 "FUNCTION"
+C L "MAIN" 0 176 1 "FUNCTION"
+C L "MAIN" 0 176 2 "FUNCTION"
+V L "caso_valor" 0 315 "int8" `1132 
+C L "MAIN" 0 176 1 "FUNCTION"
+C L "MAIN" 0 176 1 "FUNCTION"
+C L "MAIN" 0 176 1 "FUNCTION"
+C L "MAIN" 0 176 1 "FUNCTION"
+C L "MAIN" 0 176 1 "FUNCTION"
+C L "MAIN" 0 176 1 "FUNCTION"
+C L "MAIN" 0 176 1 "FUNCTION"
+C L "MAIN" 0 176 1 "FUNCTION"
+C L "MAIN" 0 176 1 "FUNCTION"
+C L "MAIN" 0 176 1 "FUNCTION"
+C L "MAIN" 0 176 1 "FUNCTION"
+C L "MAIN" 0 176 1 "FUNCTION"
+C L "MAIN" 0 176 1 "FUNCTION"
+C L "MAIN" 0 176 1 "FUNCTION"
+C L "MAIN" 0 176 1 "FUNCTION"
+C L "MAIN" 0 176 1 "FUNCTION"
+C L "MAIN" 0 176 1 "FUNCTION"
+C L "MAIN" 0 176 1 "FUNCTION"
+C L "MAIN" 0 176 1 "FUNCTION"
+C L "MAIN" 0 176 1 "FUNCTION"
+C L "MAIN" 0 176 1 "FUNCTION"
+C L "MAIN" 0 176 1 "FUNCTION"
+C L "MAIN" 0 176 1 "FUNCTION"
+C L "MAIN" 0 176 1 "FUNCTION"
+C L "MAIN" 0 176 1 "FUNCTION"
+C L "MAIN" 0 176 1 "FUNCTION"
+C L "MAIN" 0 176 1 "FUNCTION"
+C L "MAIN" 0 176 1 "FUNCTION"
+C L "MAIN" 0 176 1 "FUNCTION"
+C L "MAIN" 0 176 1 "FUNCTION"
+C L "MAIN" 0 176 1 "FUNCTION"
+C L "MAIN" 0 176 2 "FUNCTION"
+C L "MAIN" 0 176 1 "FUNCTION"
+C L "MAIN" 0 176 1 "FUNCTION"
+C L "MAIN" 0 176 1 "FUNCTION"
+C L "MAIN" 0 176 1 "FUNCTION"
+C L "solicitar" 0 176 1 "FUNCTION"
+F G "solicitar" 0 496 "void()" `1100  "Solicita cuenta al poste esclavo"
+F G "envio_master" 0 504 "void()" `1101  "reporta al maestro"
+V L "envit" 0 505 "int16" `1162 
+C L "envio_master" 0 176 1 "FUNCTION"
+C L "envio_master" 0 176 2 "FUNCTION"
+V L "cadena" 0 517 "*int8" `1171 
+F G "convertir_to_entero" 0 518 "int8(*int8 cadena)" `1094 
+V L "valor" 0 519 "int8" `1170 
+F G "enviop1" 0 544 "void()" `1090  "Convierte a enteros la cadena recibida por el poste esclavo"
+C L "enviop1" 0 176 1 "FUNCTION"
+C L "enviop1" 0 176 1 "FUNCTION"
+C L "enviop1" 0 176 1 "FUNCTION"
+C L "enviop1" 0 176 1 "FUNCTION"
+C L "enviop1" 0 176 2 "FUNCTION"
+F G "envio" 0 572 "void()" `1102  "crea paquete para enviar al modulo GPRS"
+C L "envio" 0 176 1 "FUNCTION"
+C L "envio" 0 176 1 "FUNCTION"
+C L "envio" 0 176 1 "FUNCTION"
+C L "envio" 0 176 2 "FUNCTION"
+C L "envio" 0 176 1 "FUNCTION"
+C L "envio" 0 176 2 "FUNCTION"
+C L "envio" 0 176 1 "FUNCTION"
+F G "envia2" 0 649 "void()" `1099  "Crea paquete para enviar a modulo GPRS cuando no hay conexion con esclavo"
+C L "envia2" 0 176 1 "FUNCTION"
+C L "envia2" 0 176 1 "FUNCTION"
+C L "envia2" 0 176 1 "FUNCTION"
+C L "envia2" 0 176 1 "FUNCTION"
+C L "envia2" 0 176 2 "FUNCTION"
+C L "envia2" 0 176 1 "FUNCTION"
+C L "envia2" 0 176 1 "FUNCTION"
+C L "envia2" 0 176 1 "FUNCTION"
+F G "limpiar" 0 678 "void()" `1103  "borra cuentas de subidas, bajadas y bloqueos"
+C L "limpiar" 0 176 1 "FUNCTION"
+C L "limpiar" 0 176 1 "FUNCTION"
+C L "limpiar" 0 176 1 "FUNCTION"
+F G "detecta_suma" 0 702 "void()" `1104  "Realiza suma de entradas o salidas"
+C L "detecta_suma" 0 176 1 "FUNCTION"
+C L "detecta_suma" 0 176 2 "FUNCTION"
+C L "detecta_suma" 0 176 1 "FUNCTION"
+C L "detecta_suma" 0 176 1 "FUNCTION"
+C L "detecta_suma" 0 176 1 "FUNCTION"
+C L "detecta_suma" 0 176 1 "FUNCTION"
+C L "detecta_suma" 0 176 1 "FUNCTION"
+C L "detecta_suma" 0 176 1 "FUNCTION"
+C L "detecta_suma" 0 176 1 "FUNCTION"
+C L "detecta_suma" 0 176 1 "FUNCTION"
+C L "detecta_suma" 0 176 1 "FUNCTION"
+C L "detecta_suma" 0 176 1 "FUNCTION"
+C L "detecta_suma" 0 176 1 "FUNCTION"
+C L "detecta_suma" 0 176 1 "FUNCTION"
+C L "detecta_suma" 0 176 1 "FUNCTION"
+C L "detecta_suma" 0 176 1 "FUNCTION"
+C L "detecta_suma" 0 176 1 "FUNCTION"
+C L "detecta_suma" 0 176 1 "FUNCTION"
+C L "detecta_suma" 0 176 1 "FUNCTION"
+C L "detecta_suma" 0 176 1 "FUNCTION"
+C L "detecta_suma" 0 176 1 "FUNCTION"
+C L "detecta_suma" 0 176 1 "FUNCTION"
+C L "detecta_suma" 0 176 1 "FUNCTION"
+C L "detecta_suma" 0 176 2 "FUNCTION"
+C L "detecta_suma" 0 176 1 "FUNCTION"
+C L "detecta_suma" 0 176 1 "FUNCTION"
+C L "detecta_suma" 0 176 1 "FUNCTION"
+C L "detecta_suma" 0 176 1 "FUNCTION"
+F G "finsuma" 0 823 "void()" `1091  "Pinta en LCD la nueva cifra de entrada o salida"
+C L "finsuma" 0 176 2 "FUNCTION"
+F G "contando1" 0 835 "void()" `1117  "Revisa maquina de estados para par 1"
+C L "contando1" 0 176 1 "FUNCTION"
+C L "contando1" 0 176 1 "FUNCTION"
+C L "contando1" 0 176 1 "FUNCTION"
+C L "contando1" 0 176 1 "FUNCTION"
+C L "contando1" 0 176 1 "FUNCTION"
+C L "contando1" 0 176 1 "FUNCTION"
+C L "contando1" 0 176 1 "FUNCTION"
+C L "contando1" 0 176 1 "FUNCTION"
+F G "contando2" 0 888 "void()" `1118  "Revisa maquina de estados para par 2"
+C L "contando2" 0 176 1 "FUNCTION"
+C L "contando2" 0 176 1 "FUNCTION"
+C L "contando2" 0 176 1 "FUNCTION"
+C L "contando2" 0 176 1 "FUNCTION"
+C L "contando2" 0 176 1 "FUNCTION"
+C L "contando2" 0 176 1 "FUNCTION"
+F G "contando3" 0 941 "void()" `1119  "Revisa maquina de estados para par 3"
+C L "contando3" 0 176 1 "FUNCTION"
+C L "contando3" 0 176 1 "FUNCTION"
+C L "contando3" 0 176 1 "FUNCTION"
+C L "contando3" 0 176 1 "FUNCTION"
+C L "contando3" 0 176 1 "FUNCTION"
+C L "contando3" 0 176 1 "FUNCTION"
+F G "sensando1" 0 994 "void()" `1114  "Define estados para la maquina de estados del par 1"
+C L "sensando1" 0 176 1 "FUNCTION"
+C L "sensando1" 0 176 1 "FUNCTION"
+C L "sensando1" 0 176 1 "FUNCTION"
+C L "sensando1" 0 176 1 "FUNCTION"
+C L "sensando1" 0 176 1 "FUNCTION"
+C L "sensando1" 0 176 1 "FUNCTION"
+C L "sensando1" 0 176 1 "FUNCTION"
+C L "sensando1" 0 176 1 "FUNCTION"
+C L "sensando1" 0 176 1 "FUNCTION"
+C L "sensando1" 0 176 2 "FUNCTION"
+C L "sensando1" 0 176 1 "FUNCTION"
+C L "sensando1" 0 176 1 "FUNCTION"
+C L "sensando1" 0 176 1 "FUNCTION"
+C L "sensando1" 0 176 1 "FUNCTION"
+C L "sensando1" 0 176 1 "FUNCTION"
+C L "sensando1" 0 176 1 "FUNCTION"
+C L "sensando1" 0 176 1 "FUNCTION"
+F G "sensando2" 0 1120 "void()" `1115  "Define estados para la maquina de estados del par 2"
+C L "sensando2" 0 176 1 "FUNCTION"
+C L "sensando2" 0 176 1 "FUNCTION"
+C L "sensando2" 0 176 1 "FUNCTION"
+C L "sensando2" 0 176 1 "FUNCTION"
+C L "sensando2" 0 176 1 "FUNCTION"
+C L "sensando2" 0 176 1 "FUNCTION"
+C L "sensando2" 0 176 1 "FUNCTION"
+C L "sensando2" 0 176 2 "FUNCTION"
+C L "sensando2" 0 176 1 "FUNCTION"
+C L "sensando2" 0 176 1 "FUNCTION"
+C L "sensando2" 0 176 1 "FUNCTION"
+C L "sensando2" 0 176 1 "FUNCTION"
+C L "sensando2" 0 176 1 "FUNCTION"
+C L "sensando2" 0 176 1 "FUNCTION"
+C L "sensando2" 0 176 1 "FUNCTION"
+F G "sensando3" 0 1245 "void()" `1116  "Define estados para la maquina de estados del par 3"
+C L "sensando3" 0 176 1 "FUNCTION"
+C L "sensando3" 0 176 1 "FUNCTION"
+C L "sensando3" 0 176 1 "FUNCTION"
+C L "sensando3" 0 176 1 "FUNCTION"
+C L "sensando3" 0 176 1 "FUNCTION"
+C L "sensando3" 0 176 1 "FUNCTION"
+C L "sensando3" 0 176 1 "FUNCTION"
+C L "sensando3" 0 176 1 "FUNCTION"
+C L "sensando3" 0 176 2 "FUNCTION"
+C L "sensando3" 0 176 1 "FUNCTION"
+C L "sensando3" 0 176 1 "FUNCTION"
+C L "sensando3" 0 176 1 "FUNCTION"
+C L "sensando3" 0 176 1 "FUNCTION"
+C L "sensando3" 0 176 1 "FUNCTION"
+C L "sensando3" 0 176 1 "FUNCTION"
+C L "sensando3" 0 176 1 "FUNCTION"
+F G "sensores" 0 1371 "void()" `1113  "Detecta estado (bloqueado o libre) de los sensores"
+C L "sensores" 0 176 1 "FUNCTION"
+C L "sensores" 0 176 1 "FUNCTION"
+C L "sensores" 0 176 1 "FUNCTION"
+C L "sensores" 0 176 1 "FUNCTION"
+C L "sensores" 0 176 1 "FUNCTION"
+C L "sensores" 0 176 1 "FUNCTION"
+C L "sensores" 0 176 1 "FUNCTION"
+C L "sensores" 0 176 1 "FUNCTION"
+C L "sensores" 0 176 1 "FUNCTION"
+C L "sensores" 0 176 1 "FUNCTION"
+C L "sensores" 0 176 1 "FUNCTION"
+C L "sensores" 0 176 1 "FUNCTION"
+C L "sensores" 0 176 1 "FUNCTION"
+C L "sensores" 0 176 1 "FUNCTION"
+C L "sensores" 0 176 1 "FUNCTION"
+C L "sensores" 0 176 1 "FUNCTION"
+C L "sensores" 0 176 1 "FUNCTION"
+C L "sensores" 0 176 1 "FUNCTION"
+C L "sensores" 0 176 1 "FUNCTION"
+C L "sensores" 0 176 1 "FUNCTION"
+C L "sensores" 0 176 1 "FUNCTION"
+C L "sentidos" 0 176 1 "FUNCTION"
+F G "sentidos" 0 1565 "void()" `1112  "Define si la persona esta entrando o saliendo"
+C L "sentidos" 0 176 2 "FUNCTION"
+C L "sentidos" 0 176 2 "FUNCTION"
+F G "rd_eeprom" 0 1584 "void()" `1109  "Revisa si cadena recibida es un instruccion"
+C L "rd_eeprom" 0 176 2 "FUNCTION"
+C L "rd_eeprom" 0 176 1 "FUNCTION"
+C L "rd_eeprom" 0 176 1 "FUNCTION"
+C L "rd_eeprom" 0 176 1 "FUNCTION"
+C L "rd_eeprom" 0 176 1 "FUNCTION"
+F G "rd_eeprom_inicio" 0 1610 "void()" `1110  ""
+C L "rd_eeprom_inicio" 0 176 1 "FUNCTION"
+C L "rd_eeprom_inicio" 0 176 1 "FUNCTION"
+C L "rd_eeprom_inicio" 0 176 2 "FUNCTION"
+F G "lcd_cuentas" 0 1632 "void()" `1111  "Escribe las cuenta en LCD"
+F G "write_ent" 0 1661 "void()" `1105  "Graba en eeprom las subidas del poste"
+C L "write_ent" 0 176 1 "FUNCTION"
+C L "write_ent" 0 176 1 "FUNCTION"
+F G "write_sal" 0 1670 "void()" `1106  "Graba en eeprom las bajadas del poste"
+C L "write_sal" 0 176 1 "FUNCTION"
+C L "write_sal" 0 176 1 "FUNCTION"
+F G "entraron_total" 0 1679 "void()" `1107  "Graba en eeprom el total de subidas"
+V L "reg_h" 0 1681 "int8" `1219 
+V L "reg_l" 0 1681 "int8" `1220 
+V L "total" 0 1682 "int16" `1221 
+F G "salieron_total" 0 1693 "void()" `1108  "Graba en eeprom el total de bajadas"
+V L "reg_h" 0 1695 "int8" `1222 
+V L "reg_l" 0 1695 "int8" `1223 
+V L "total" 0 1696 "int16" `1224 
+F G "graba_conta2" 0 1707 "void()" `1093  "Graba en eeprom el total de pasajes de poste esclavo"
+V L "reg_hc" 0 1709 "int8" `1225 
+V L "reg_lc" 0 1709 "int8" `1226 
+V L "totalc" 0 1710 "int16" `1227 
+F G "leer_conta2" 0 1724 "void()" `1092  "Carga de eeprom el total de pasajes de poste esclavo"
+V L "reg_hc" 0 1726 "int8" `1228 
+V L "reg_lc" 0 1726 "int8" `1229 
+V L "totalc" 0 1727 "int16" `1230 
+F G "reset" 0 1739 "void()" `1121 
+C L "reset" 0 176 1 "FUNCTION"
+C L "reset" 0 176 1 "FUNCTION"
+C L "reset" 0 176 1 "FUNCTION"
+C L "reset" 0 176 1 "FUNCTION"
+C L "reset" 0 176 1 "FUNCTION"
+V L "command" 0 1763 "*int8" `1233 
+F G "evaluar_string" 0 1764 "int8(*int8 command)" `1096 
+V L "conteo_command" 0 1765 "int8" `1232 
+V L "iresult" 0 1766 "int8" `1233 
+F G "cuenta_pulsos" 0 1782 "void()" `1088  "Pulsos de subida para impresion (flanco alto)"
+F G "rev_suben" 0 1791 "void()" `1089 
 F B "reset_cpu" 0 0
 F B "abs" 1 0
 F B "sleep" 0 1
