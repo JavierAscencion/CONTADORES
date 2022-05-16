@@ -13,6 +13,32 @@ Type=4
 [Opened Files]
 1=CONTADOR_V1.0.c
 2=
+
+[ProjectLog]
+Days=2
+D1=13-05-2022
+D1_L=10
+D1_L1=[41034]Started Editing.
+D1_L2=[41943]Stopped Editing.
+D1_L3=[42109]Started Editing.
+D1_L4=[42478]Stopped Editing.
+TotalEdit=12
+TotalDebug=0
+D1_E=12
+D1_D=0
+D1_L5=[43270]Project Closed.
+D1_L6=[43899]Project Opened.
+D1_L7=[44668]Started Editing.
+D1_L8=[44971]Stopped Editing.
+D1_L9=[47411]Project Opened.
+D1_L10=[52110]Project Closed.
+D2=16-05-2022
+D2_L=5
+D2_L1=[30760]Project Opened.
+D2_L2=[31579]Started Editing.
+D2_L3=[31909]Stopped Editing.
+D2_L4=[31930]Started Editing.
+D2_L5=[32231]Stopped Editing.
 [Units]
 Count=1
 1=CONTADOR_V1.0 (main)

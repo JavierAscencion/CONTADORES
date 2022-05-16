@@ -1,0 +1,162 @@
+
+ROM used:   13148/32768 (40%)
+            13148/32768 (40%) including unused fragments
+
+            2.8 Average locations per line
+            8.4 Average locations per statement
+
+RAM used:   392/1536 (26%) at main() level
+            415/1536 (27%) worst case
+
+Stack used: 11 worst case (10 in main + 1 for interrupts)
+Stack size: 31
+
+Lines Stmts  %   Files
+----- ----- ---  -----
+ 1553  1135  72  CONTADOR_V5.02.c
+  843     0   0  C:\Program Files (x86)\PICC\Devices\18F4580.h
+ 1351   359  23  C:\Program Files (x86)\PICC\Drivers\stdlib.h
+   32     0   0  C:\Program Files (x86)\PICC\Drivers\stddef.h
+  423     0   0  C:\Program Files (x86)\PICC\Drivers\string.h
+   28     0   0  C:\Program Files (x86)\PICC\Drivers\ctype.h
+   37     0   0  C:\Program Files (x86)\PICC\Drivers\stdio.h
+  305    54   3  LCD_4x20.c
+   76    24   2  24256_eeprom.c
+----- -----
+ 4648  1572 Total
+
+Page ROM  %  RAM    Vol Diff  Functions:
+---- --- --- ---    --- ----  ----------
+0    122   0    5    243  7.0  strcoll
+0     40   0    1             @delay_ms1
+0     34   0    1             @delay_us1
+0     60   0    2             @GETCH_BIU_1
+0     78   0    1             @PUTCHAR_2_
+0    118   0    4             @GETCH_2_
+0     20   0    0             @const929
+0     76   0    1    326  2.8  lcd_send_nibble
+0     68   0    3    235  3.8  lcd_send_byte
+0    116   0    2    406  4.7  lcd_init
+0     82   0    4    386  6.5  lcd_gotoxy
+0     96   0    1    317  4.3  lcd_putc
+0    108   0    3             @I2C_READ_1
+0    118   0    1             @I2C_WRITE_1
+0      8   0    0     32  1.0  init_ext_eeprom
+0    262   1    6    331  4.0  write_ext_eeprom
+0    168   1    5    239  1.9  read_ext_eeprom
+0    180   1    0    741  3.8  TIMER1_isr
+0     90   0    4    223  5.0  isr_rs232
+0   2046   8    4   8500 10.9  MAIN
+0     12   0    0             @const1123
+0     34   0    2             @PSTRINGC_9600_31766_31767
+0     12   0    0             @const1125
+0     32   0    2             @PSTRINGC_943
+0     44   0    3             @DIV88
+0    196   1    6             @PRINTF_D_943
+0     12   0    0             @const1135
+0     12   0    0             @const1136
+0     34   0    2             @PSTRINGC_924
+0     12   0    0             @const1138
+0      6   0    0             @const1139
+0      6   0    0             @const1140
+0     12   0    0             @const1141
+0      6   0    0             @const1142
+0      6   0    0             @const1143
+0     42   0    0             @goto12247
+0     26   0    0             @MEMSET
+0      6   0    0             @const1149
+0      6   0    0             @const1150
+0      6   0    0             @const1151
+0      4   0    0             @const1152
+0      4   0    0             @const1153
+0      4   0    0             @const1154
+0      4   0    0             @const1155
+0     24   0    0     82  1.9  solicitar
+0     12   0    0             @const1156
+0    190   1    4    279  3.1  envio_master
+0     36   0    0             @const1158
+0     44   0    3             @PSTRINGCN_9600_31766_31767
+0    234   1    9             @PRINTF_LD_9600_31766_31767
+0    180   1    9             @PRINTF_LU_9600_31766_31767
+0    168   1    3    653  4.3  convertir_to_entero
+0    384   1    3   1101  5.4  enviop1
+0    972   4    2   3945  7.4  envio
+0     46   0    0             @const1166
+0     40   0    3             @PSTRINGCN_924
+0    196   1    9             @PRINTF_LU_924
+0    124   0    2             @PRINTF_U_924
+0    334   1    2    785  3.8  envia2
+0     42   0    0             @const1174
+0      6   0    0             @const1175
+0    108   0    0    458  2.3  limpiar
+0      2   0    0             @const1176
+0    366   1    1   2175  6.9  detecta_suma
+0     62   0    2    176  2.7  finsuma
+0     80   0    0    603  6.1  contando1
+0     50   0    0             @goto12808
+0     80   0    0    603  6.1  contando2
+0     50   0    0             @goto12849
+0     80   0    0    603  6.1  contando3
+0     50   0    0             @goto12890
+0    646   2    0   5505  4.5  sensando1
+0      2   0    0             @const1180
+0      2   0    0             @const1181
+0      2   0    0             @const1182
+0      2   0    0             @const1183
+0    646   2    0   5505  4.5  sensando2
+0      2   0    0             @const1184
+0      2   0    0             @const1185
+0      2   0    0             @const1186
+0      2   0    0             @const1187
+0    648   2    0   5505  4.5  sensando3
+0      2   0    0             @const1188
+0      2   0    0             @const1189
+0      2   0    0             @const1190
+0      2   0    0             @const1191
+0    868   3    0   4961  5.4  sensores
+0     74   0    0    482  4.2  sentidos
+0    170   1    5    444  7.1  rd_eeprom
+0     12   0    0             @const1198
+0    526   2    0   1109  3.4  lcd_cuentas
+0      8   0    0             @const1201
+0     40   0    3             @PSTRINGCN_943
+0    252   1    9             @PRINTF_LD_943
+0      8   0    0             @const1206
+0      8   0    0             @const1207
+0      8   0    0             @const1208
+0      8   0    0             @const1210
+0      8   0    0             @const1211
+0      8   0    0             @const1212
+0      8   0    0             @const1213
+0     54   0    2    119  2.1  write_ent
+0     54   0    2    119  2.1  write_sal
+0     90   0    2    284  3.4  entraron_total
+0     90   0    2    284  3.4  salieron_total
+0     78   0    0    341  2.9  graba_conta2
+0     82   0    0    304  3.4  leer_conta2
+0     56   0    0    157  2.9  reset
+0     14   0    0             @const1226
+0     90   0    6    222  6.6  evaluar_string
+ Inline         0             @cinit1
+
+Program metrics:
+    Functions               39
+    Statements              1572
+    Comments                1425
+    Volume (V)              78449
+    Difficulty (D)          173.3
+    Effort to implement (E) 13593419
+    Time to implement (T)   209 hours, 46 minutes
+    Est Delivered Bugs (B)  19
+    Cyclomatic Complexity   230
+    Maintainability (MI)    73
+
+ Segment     Used  Free
+-----------  ----  ----
+00000-00002     4  0  
+00004-00006     0  4  
+00008-000B8   178  0  
+000BA-07FFE  12966  19616  
+
+
+

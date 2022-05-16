@@ -1,0 +1,26 @@
+[PROJECT]
+Target=CONTADOR_V5.02.hex
+Processor_Text=PIC18F4580
+CCSVersion=5.025
+Compiler=PCH
+[Target Data]
+FileList=CONTADOR_V5.02.c
+[CONTADOR_V5.02.c]
+Type=4
+[mru-list]
+1=CONTADOR_V5.02.c
+[Units]
+Count=1
+1=CONTADOR_V5.02 (main)
+
+[ProjectLog]
+Days=2
+D1=09-05-2022
+D1_L=3
+D1_L1=[41260]Project Closed.
+D1_L2=[41701]Project Opened.
+D1_L3=[42726]Project Closed.
+D2=13-05-2022
+D2_L=2
+D2_L1=[32143]Project Opened.
+D2_L2=[32154]Project Closed.

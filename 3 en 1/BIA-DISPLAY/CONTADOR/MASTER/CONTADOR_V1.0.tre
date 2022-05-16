@@ -1,5 +1,5 @@
 ÀÄCONTADOR_V1
-   ÃÄMAIN  0/2132  Ram=2
+   ÃÄMAIN  0/2188  Ram=2
    ³  ÃÄ@cinit1  (Inline)  Ram=0
    ³  ÃÄlcd_init  0/116  Ram=2
    ³  ³  ÃÄ@delay_ms1  0/40  Ram=1
@@ -185,8 +185,7 @@
    ³  ÃÄlimpiar  0/108  Ram=0
    ³  ³  ÀÄ*
    ³  ÃÄ@GETCH_2_  0/120  Ram=4
-   ³  ÃÄ@const1135  0/28  Ram=0
-   ³  ÃÄrd_eeprom  0/170  Ram=5
+   ³  ÃÄ@const1137  0/28  Ram=0
    ³  ÃÄevaluar_string  0/142  Ram=6
    ³  ³  ÀÄstrcoll  0/122  Ram=5
    ³  ÃÄlcd_gotoxy  0/82  Ram=4
@@ -228,7 +227,7 @@
    ³  ³  ÃÄ@MEMSET  0/26  Ram=0
    ³  ³  ÃÄ@MEMSET  0/26  Ram=0
    ³  ³  ÃÄ@MEMSET  0/26  Ram=0
-   ³  ³  ÃÄ@const1173  0/20  Ram=0
+   ³  ³  ÃÄ@const1174  0/20  Ram=0
    ³  ³  ÃÄstrtok  0/176  Ram=10
    ³  ³  ³  ÃÄstrspn  0/144  Ram=9
    ³  ³  ³  ÀÄstrpbrk  0/122  Ram=9
@@ -277,6 +276,9 @@
    ³  ³  ÀÄ*
    ³  ÃÄlcd_gotoxy  0/82  Ram=4
    ³  ³  ÀÄ*
+   ³  ÃÄcuenta_pulsos  0/16  Ram=0
+   ³  ³  ÀÄrev_suben  0/18  Ram=0
+   ³  ³     ÀÄ@PSTRINGC_9600_31766_31767  0/34  Ram=2
    ³  ÃÄ@PSTRINGC_943  0/32  Ram=2
    ³  ³  ÀÄ*
    ³  ÃÄlcd_gotoxy  0/82  Ram=4
@@ -401,204 +403,216 @@
    ³  ³  ÀÄ*
    ³  ÃÄlcd_cuentas  0/526  Ram=0
    ³  ³  ÀÄ*
-   ³  ÀÄsensores  0/868  Ram=0
-   ³     ÃÄlcd_gotoxy  0/82  Ram=4
-   ³     ³  ÀÄ*
-   ³     ÃÄlcd_putc  0/96  Ram=1
-   ³     ³  ÀÄ*
-   ³     ÃÄlcd_putc  0/96  Ram=1
-   ³     ³  ÀÄ*
-   ³     ÃÄ@PRINTF_D_943  0/196  Ram=6
-   ³     ³  ÀÄ*
-   ³     ÃÄsensando1  0/646  Ram=0
-   ³     ³  ÃÄsentidos  0/74  Ram=0
-   ³     ³  ÃÄlcd_gotoxy  0/82  Ram=4
-   ³     ³  ³  ÀÄ*
-   ³     ³  ÃÄlcd_putc  0/96  Ram=1
-   ³     ³  ³  ÀÄ*
-   ³     ³  ÃÄlcd_gotoxy  0/82  Ram=4
-   ³     ³  ³  ÀÄ*
-   ³     ³  ÃÄ@PSTRINGC_943  0/32  Ram=2
-   ³     ³  ³  ÀÄ*
-   ³     ³  ÃÄlcd_gotoxy  0/82  Ram=4
-   ³     ³  ³  ÀÄ*
-   ³     ³  ÃÄ@PSTRINGC_943  0/32  Ram=2
-   ³     ³  ³  ÀÄ*
-   ³     ³  ÃÄsentidos  0/74  Ram=0
-   ³     ³  ÃÄlcd_gotoxy  0/82  Ram=4
-   ³     ³  ³  ÀÄ*
-   ³     ³  ÃÄlcd_putc  0/96  Ram=1
-   ³     ³  ³  ÀÄ*
-   ³     ³  ÃÄlcd_gotoxy  0/82  Ram=4
-   ³     ³  ³  ÀÄ*
-   ³     ³  ÃÄ@PSTRINGC_943  0/32  Ram=2
-   ³     ³  ³  ÀÄ*
-   ³     ³  ÃÄlcd_gotoxy  0/82  Ram=4
-   ³     ³  ³  ÀÄ*
-   ³     ³  ÀÄ@PSTRINGC_943  0/32  Ram=2
-   ³     ³     ÀÄ*
-   ³     ÃÄcontando1  0/80  Ram=0
-   ³     ³  ÃÄ@goto12706  0/50  Ram=0
-   ³     ³  ÃÄdetecta_suma  0/366  Ram=1
-   ³     ³  ³  ÃÄwrite_ent  0/54  Ram=2
-   ³     ³  ³  ³  ÀÄ*
-   ³     ³  ³  ÃÄwrite_sal  0/54  Ram=2
-   ³     ³  ³  ³  ÀÄ*
-   ³     ³  ³  ÃÄwrite_ent  0/54  Ram=2
-   ³     ³  ³  ³  ÀÄ*
-   ³     ³  ³  ÃÄwrite_sal  0/54  Ram=2
-   ³     ³  ³  ³  ÀÄ*
-   ³     ³  ³  ÃÄwrite_ent  0/54  Ram=2
-   ³     ³  ³  ³  ÀÄ*
-   ³     ³  ³  ÃÄwrite_sal  0/54  Ram=2
-   ³     ³  ³  ³  ÀÄ*
-   ³     ³  ³  ÃÄwrite_ent  0/54  Ram=2
-   ³     ³  ³  ³  ÀÄ*
-   ³     ³  ³  ÃÄwrite_sal  0/54  Ram=2
-   ³     ³  ³  ³  ÀÄ*
-   ³     ³  ³  ÃÄwrite_ent  0/54  Ram=2
-   ³     ³  ³  ³  ÀÄ*
-   ³     ³  ³  ÀÄwrite_sal  0/54  Ram=2
-   ³     ³  ³     ÀÄ*
-   ³     ³  ÃÄdetecta_suma  0/366  Ram=1
-   ³     ³  ³  ÀÄ*
-   ³     ³  ÃÄdetecta_suma  0/366  Ram=1
-   ³     ³  ³  ÀÄ*
-   ³     ³  ÀÄdetecta_suma  0/366  Ram=1
-   ³     ³     ÀÄ*
-   ³     ÃÄlcd_gotoxy  0/82  Ram=4
-   ³     ³  ÀÄ*
-   ³     ÃÄlcd_putc  0/96  Ram=1
-   ³     ³  ÀÄ*
-   ³     ÃÄlcd_putc  0/96  Ram=1
-   ³     ³  ÀÄ*
-   ³     ÃÄ@PRINTF_D_943  0/196  Ram=6
-   ³     ³  ÀÄ*
-   ³     ÃÄlcd_putc  0/96  Ram=1
-   ³     ³  ÀÄ*
-   ³     ÃÄsensando1  0/646  Ram=0
-   ³     ³  ÀÄ*
-   ³     ÃÄcontando1  0/80  Ram=0
-   ³     ³  ÀÄ*
-   ³     ÃÄlcd_gotoxy  0/82  Ram=4
-   ³     ³  ÀÄ*
-   ³     ÃÄlcd_putc  0/96  Ram=1
-   ³     ³  ÀÄ*
-   ³     ÃÄlcd_putc  0/96  Ram=1
-   ³     ³  ÀÄ*
-   ³     ÃÄ@PRINTF_D_943  0/196  Ram=6
-   ³     ³  ÀÄ*
-   ³     ÃÄsensando2  0/646  Ram=0
-   ³     ³  ÃÄsentidos  0/74  Ram=0
-   ³     ³  ÃÄlcd_gotoxy  0/82  Ram=4
-   ³     ³  ³  ÀÄ*
-   ³     ³  ÃÄlcd_putc  0/96  Ram=1
-   ³     ³  ³  ÀÄ*
-   ³     ³  ÃÄlcd_gotoxy  0/82  Ram=4
-   ³     ³  ³  ÀÄ*
-   ³     ³  ÃÄ@PSTRINGC_943  0/32  Ram=2
-   ³     ³  ³  ÀÄ*
-   ³     ³  ÃÄlcd_gotoxy  0/82  Ram=4
-   ³     ³  ³  ÀÄ*
-   ³     ³  ÃÄ@PSTRINGC_943  0/32  Ram=2
-   ³     ³  ³  ÀÄ*
-   ³     ³  ÃÄsentidos  0/74  Ram=0
-   ³     ³  ÃÄlcd_gotoxy  0/82  Ram=4
-   ³     ³  ³  ÀÄ*
-   ³     ³  ÃÄlcd_putc  0/96  Ram=1
-   ³     ³  ³  ÀÄ*
-   ³     ³  ÃÄlcd_gotoxy  0/82  Ram=4
-   ³     ³  ³  ÀÄ*
-   ³     ³  ÃÄ@PSTRINGC_943  0/32  Ram=2
-   ³     ³  ³  ÀÄ*
-   ³     ³  ÃÄlcd_gotoxy  0/82  Ram=4
-   ³     ³  ³  ÀÄ*
-   ³     ³  ÀÄ@PSTRINGC_943  0/32  Ram=2
-   ³     ³     ÀÄ*
-   ³     ÃÄcontando2  0/80  Ram=0
-   ³     ³  ÃÄ@goto12747  0/50  Ram=0
-   ³     ³  ÃÄdetecta_suma  0/366  Ram=1
-   ³     ³  ³  ÀÄ*
-   ³     ³  ÃÄdetecta_suma  0/366  Ram=1
-   ³     ³  ³  ÀÄ*
-   ³     ³  ÃÄdetecta_suma  0/366  Ram=1
-   ³     ³  ³  ÀÄ*
-   ³     ³  ÀÄdetecta_suma  0/366  Ram=1
-   ³     ³     ÀÄ*
-   ³     ÃÄlcd_gotoxy  0/82  Ram=4
-   ³     ³  ÀÄ*
-   ³     ÃÄlcd_putc  0/96  Ram=1
-   ³     ³  ÀÄ*
-   ³     ÃÄlcd_putc  0/96  Ram=1
-   ³     ³  ÀÄ*
-   ³     ÃÄ@PRINTF_D_943  0/196  Ram=6
-   ³     ³  ÀÄ*
-   ³     ÃÄlcd_putc  0/96  Ram=1
-   ³     ³  ÀÄ*
-   ³     ÃÄsensando2  0/646  Ram=0
-   ³     ³  ÀÄ*
-   ³     ÃÄcontando2  0/80  Ram=0
-   ³     ³  ÀÄ*
-   ³     ÃÄlcd_gotoxy  0/82  Ram=4
-   ³     ³  ÀÄ*
-   ³     ÃÄlcd_putc  0/96  Ram=1
-   ³     ³  ÀÄ*
-   ³     ÃÄlcd_putc  0/96  Ram=1
-   ³     ³  ÀÄ*
-   ³     ÃÄ@PRINTF_D_943  0/196  Ram=6
-   ³     ³  ÀÄ*
-   ³     ÃÄsensando3  0/648  Ram=0
-   ³     ³  ÃÄsentidos  0/74  Ram=0
-   ³     ³  ÃÄlcd_gotoxy  0/82  Ram=4
-   ³     ³  ³  ÀÄ*
-   ³     ³  ÃÄlcd_putc  0/96  Ram=1
-   ³     ³  ³  ÀÄ*
-   ³     ³  ÃÄlcd_gotoxy  0/82  Ram=4
-   ³     ³  ³  ÀÄ*
-   ³     ³  ÃÄ@PSTRINGC_943  0/32  Ram=2
-   ³     ³  ³  ÀÄ*
-   ³     ³  ÃÄlcd_gotoxy  0/82  Ram=4
-   ³     ³  ³  ÀÄ*
-   ³     ³  ÃÄ@PSTRINGC_943  0/32  Ram=2
-   ³     ³  ³  ÀÄ*
-   ³     ³  ÃÄsentidos  0/74  Ram=0
-   ³     ³  ÃÄlcd_gotoxy  0/82  Ram=4
-   ³     ³  ³  ÀÄ*
-   ³     ³  ÃÄlcd_putc  0/96  Ram=1
-   ³     ³  ³  ÀÄ*
-   ³     ³  ÃÄlcd_gotoxy  0/82  Ram=4
-   ³     ³  ³  ÀÄ*
-   ³     ³  ÃÄ@PSTRINGC_943  0/32  Ram=2
-   ³     ³  ³  ÀÄ*
-   ³     ³  ÃÄlcd_gotoxy  0/82  Ram=4
-   ³     ³  ³  ÀÄ*
-   ³     ³  ÀÄ@PSTRINGC_943  0/32  Ram=2
-   ³     ³     ÀÄ*
-   ³     ÃÄcontando3  0/80  Ram=0
-   ³     ³  ÃÄ@goto12788  0/50  Ram=0
-   ³     ³  ÃÄdetecta_suma  0/366  Ram=1
-   ³     ³  ³  ÀÄ*
-   ³     ³  ÃÄdetecta_suma  0/366  Ram=1
-   ³     ³  ³  ÀÄ*
-   ³     ³  ÃÄdetecta_suma  0/366  Ram=1
-   ³     ³  ³  ÀÄ*
-   ³     ³  ÀÄdetecta_suma  0/366  Ram=1
-   ³     ³     ÀÄ*
-   ³     ÃÄlcd_gotoxy  0/82  Ram=4
-   ³     ³  ÀÄ*
-   ³     ÃÄlcd_putc  0/96  Ram=1
-   ³     ³  ÀÄ*
-   ³     ÃÄlcd_putc  0/96  Ram=1
-   ³     ³  ÀÄ*
-   ³     ÃÄ@PRINTF_D_943  0/196  Ram=6
-   ³     ³  ÀÄ*
-   ³     ÃÄlcd_putc  0/96  Ram=1
-   ³     ³  ÀÄ*
-   ³     ÃÄsensando3  0/648  Ram=0
-   ³     ³  ÀÄ*
-   ³     ÀÄcontando3  0/80  Ram=0
-   ³        ÀÄ*
-   ÃÄTIMER1_isr  0/180  Ram=0
+   ³  ÃÄsensores  0/868  Ram=0
+   ³  ³  ÃÄlcd_gotoxy  0/82  Ram=4
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄlcd_putc  0/96  Ram=1
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄlcd_putc  0/96  Ram=1
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄ@PRINTF_D_943  0/196  Ram=6
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄsensando1  0/646  Ram=0
+   ³  ³  ³  ÃÄsentidos  0/74  Ram=0
+   ³  ³  ³  ÃÄlcd_gotoxy  0/82  Ram=4
+   ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ÃÄlcd_putc  0/96  Ram=1
+   ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ÃÄlcd_gotoxy  0/82  Ram=4
+   ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ÃÄ@PSTRINGC_943  0/32  Ram=2
+   ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ÃÄlcd_gotoxy  0/82  Ram=4
+   ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ÃÄ@PSTRINGC_943  0/32  Ram=2
+   ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ÃÄsentidos  0/74  Ram=0
+   ³  ³  ³  ÃÄlcd_gotoxy  0/82  Ram=4
+   ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ÃÄlcd_putc  0/96  Ram=1
+   ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ÃÄlcd_gotoxy  0/82  Ram=4
+   ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ÃÄ@PSTRINGC_943  0/32  Ram=2
+   ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ÃÄlcd_gotoxy  0/82  Ram=4
+   ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ÀÄ@PSTRINGC_943  0/32  Ram=2
+   ³  ³  ³     ÀÄ*
+   ³  ³  ÃÄcontando1  0/80  Ram=0
+   ³  ³  ³  ÃÄ@goto12687  0/50  Ram=0
+   ³  ³  ³  ÃÄdetecta_suma  0/380  Ram=1
+   ³  ³  ³  ³  ÃÄwrite_ent  0/54  Ram=2
+   ³  ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ³  ÃÄcuenta_pulsos  0/16  Ram=0
+   ³  ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ³  ÃÄwrite_sal  0/54  Ram=2
+   ³  ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ³  ÃÄwrite_ent  0/54  Ram=2
+   ³  ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ³  ÃÄcuenta_pulsos  0/16  Ram=0
+   ³  ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ³  ÃÄwrite_sal  0/54  Ram=2
+   ³  ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ³  ÃÄwrite_ent  0/54  Ram=2
+   ³  ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ³  ÃÄcuenta_pulsos  0/16  Ram=0
+   ³  ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ³  ÃÄwrite_sal  0/54  Ram=2
+   ³  ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ³  ÃÄwrite_ent  0/54  Ram=2
+   ³  ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ³  ÃÄcuenta_pulsos  0/16  Ram=0
+   ³  ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ³  ÃÄwrite_sal  0/54  Ram=2
+   ³  ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ³  ÃÄwrite_ent  0/54  Ram=2
+   ³  ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ³  ÃÄcuenta_pulsos  0/16  Ram=0
+   ³  ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ³  ÀÄwrite_sal  0/54  Ram=2
+   ³  ³  ³  ³     ÀÄ*
+   ³  ³  ³  ÃÄdetecta_suma  0/380  Ram=1
+   ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ÃÄdetecta_suma  0/380  Ram=1
+   ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ÀÄdetecta_suma  0/380  Ram=1
+   ³  ³  ³     ÀÄ*
+   ³  ³  ÃÄlcd_gotoxy  0/82  Ram=4
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄlcd_putc  0/96  Ram=1
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄlcd_putc  0/96  Ram=1
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄ@PRINTF_D_943  0/196  Ram=6
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄlcd_putc  0/96  Ram=1
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄsensando1  0/646  Ram=0
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄcontando1  0/80  Ram=0
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄlcd_gotoxy  0/82  Ram=4
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄlcd_putc  0/96  Ram=1
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄlcd_putc  0/96  Ram=1
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄ@PRINTF_D_943  0/196  Ram=6
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄsensando2  0/646  Ram=0
+   ³  ³  ³  ÃÄsentidos  0/74  Ram=0
+   ³  ³  ³  ÃÄlcd_gotoxy  0/82  Ram=4
+   ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ÃÄlcd_putc  0/96  Ram=1
+   ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ÃÄlcd_gotoxy  0/82  Ram=4
+   ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ÃÄ@PSTRINGC_943  0/32  Ram=2
+   ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ÃÄlcd_gotoxy  0/82  Ram=4
+   ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ÃÄ@PSTRINGC_943  0/32  Ram=2
+   ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ÃÄsentidos  0/74  Ram=0
+   ³  ³  ³  ÃÄlcd_gotoxy  0/82  Ram=4
+   ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ÃÄlcd_putc  0/96  Ram=1
+   ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ÃÄlcd_gotoxy  0/82  Ram=4
+   ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ÃÄ@PSTRINGC_943  0/32  Ram=2
+   ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ÃÄlcd_gotoxy  0/82  Ram=4
+   ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ÀÄ@PSTRINGC_943  0/32  Ram=2
+   ³  ³  ³     ÀÄ*
+   ³  ³  ÃÄcontando2  0/80  Ram=0
+   ³  ³  ³  ÃÄ@goto12728  0/50  Ram=0
+   ³  ³  ³  ÃÄdetecta_suma  0/380  Ram=1
+   ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ÃÄdetecta_suma  0/380  Ram=1
+   ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ÃÄdetecta_suma  0/380  Ram=1
+   ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ÀÄdetecta_suma  0/380  Ram=1
+   ³  ³  ³     ÀÄ*
+   ³  ³  ÃÄlcd_gotoxy  0/82  Ram=4
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄlcd_putc  0/96  Ram=1
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄlcd_putc  0/96  Ram=1
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄ@PRINTF_D_943  0/196  Ram=6
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄlcd_putc  0/96  Ram=1
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄsensando2  0/646  Ram=0
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄcontando2  0/80  Ram=0
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄlcd_gotoxy  0/82  Ram=4
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄlcd_putc  0/96  Ram=1
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄlcd_putc  0/96  Ram=1
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄ@PRINTF_D_943  0/196  Ram=6
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄsensando3  0/648  Ram=0
+   ³  ³  ³  ÃÄsentidos  0/74  Ram=0
+   ³  ³  ³  ÃÄlcd_gotoxy  0/82  Ram=4
+   ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ÃÄlcd_putc  0/96  Ram=1
+   ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ÃÄlcd_gotoxy  0/82  Ram=4
+   ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ÃÄ@PSTRINGC_943  0/32  Ram=2
+   ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ÃÄlcd_gotoxy  0/82  Ram=4
+   ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ÃÄ@PSTRINGC_943  0/32  Ram=2
+   ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ÃÄsentidos  0/74  Ram=0
+   ³  ³  ³  ÃÄlcd_gotoxy  0/82  Ram=4
+   ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ÃÄlcd_putc  0/96  Ram=1
+   ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ÃÄlcd_gotoxy  0/82  Ram=4
+   ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ÃÄ@PSTRINGC_943  0/32  Ram=2
+   ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ÃÄlcd_gotoxy  0/82  Ram=4
+   ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ÀÄ@PSTRINGC_943  0/32  Ram=2
+   ³  ³  ³     ÀÄ*
+   ³  ³  ÃÄcontando3  0/80  Ram=0
+   ³  ³  ³  ÃÄ@goto12769  0/50  Ram=0
+   ³  ³  ³  ÃÄdetecta_suma  0/380  Ram=1
+   ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ÃÄdetecta_suma  0/380  Ram=1
+   ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ÃÄdetecta_suma  0/380  Ram=1
+   ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ÀÄdetecta_suma  0/380  Ram=1
+   ³  ³  ³     ÀÄ*
+   ³  ³  ÃÄlcd_gotoxy  0/82  Ram=4
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄlcd_putc  0/96  Ram=1
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄlcd_putc  0/96  Ram=1
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄ@PRINTF_D_943  0/196  Ram=6
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄlcd_putc  0/96  Ram=1
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄsensando3  0/648  Ram=0
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÀÄcontando3  0/80  Ram=0
+   ³  ³     ÀÄ*
+   ³  ÀÄrev_suben  0/18  Ram=0
+   ³     ÀÄ*
+   ÃÄTIMER1_isr  0/182  Ram=0
    ÃÄTIMER3_isr  0/20  Ram=0
    ÀÄisr_rs232  0/90  Ram=4
       ÀÄ@GETCH_BIU_1  0/60  Ram=2
