@@ -28,8 +28,9 @@ D1_E=15
 D1_D=0
 D1_L5=[45643]Project Closed.
 D2=17-05-2022
-D2_L=1
+D2_L=2
 D2_L1=[45952]Project Opened.
+D2_L2=[48806]Project Closed.
 [Units]
 Count=1
 1=CONTADOR_V5.02 (main)
