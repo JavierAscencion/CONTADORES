@@ -13,7 +13,7 @@ Stack size: 31
 
 Lines Stmts  %   Files
 ----- ----- ---  -----
- 1822  1123  72  CONTADOR_V1.0.c
+ 1821  1123  72  CONTADOR_V1.0.c
   843     0   0  C:\Program Files (x86)\PICC\Devices\18F4580.h
  1351   359  23  C:\Program Files (x86)\PICC\Drivers\stdlib.h
    32     0   0  C:\Program Files (x86)\PICC\Drivers\stddef.h
@@ -23,7 +23,7 @@ Lines Stmts  %   Files
   305    54   3  LCD_4x20.c
    76    24   2  24256_eeprom.c
 ----- -----
- 4917  1560 Total
+ 4916  1560 Total
 
 Page ROM  %  RAM    Vol Diff  Functions:
 ---- --- --- ---    --- ----  ----------

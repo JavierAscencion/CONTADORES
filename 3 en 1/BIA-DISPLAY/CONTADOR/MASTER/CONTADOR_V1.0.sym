@@ -458,7 +458,7 @@ Project Directory:
     D:\PROYECTOS\TRANSPORTE\CONTADORES\3 en 1\BIA-DISPLAY\CONTADOR\MASTER\
 
 Project Files:
-    CONTADOR_V1.0.c                                         [16-may.-22 09:50  CRC=3833D366]
+    CONTADOR_V1.0.c                                         [30-may.-22 11:49  CRC=52332EFC]
     C:\Program Files (x86)\PICC\Devices\18F4580.h           [18-abr.-14 17:57  CRC=D6F2A36B]
     C:\Program Files (x86)\PICC\Drivers\stdlib.h            [08-jun.-11 15:39  CRC=0B6669CF]
     C:\Program Files (x86)\PICC\Drivers\stddef.h            [16-jul.-10 10:27  CRC=897CEC6C]
@@ -468,7 +468,7 @@ Project Files:
     LCD_4x20.c                                              [26-ago.-21 16:46  CRC=602D58D3]
     24256_eeprom.c                                          [26-ago.-21 16:46  CRC=E1DA8CD4]
 
-Source signature=A97B9D2E
+Source signature=C37AF8C4
 
 Units:
     CONTADOR_V1.0 (main)

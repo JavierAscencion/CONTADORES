@@ -92,7 +92,7 @@ char *textosearch[11] = {"V5.01     \r",
                          "SINFUNCION\r",
                          "          \r"};
 
-char version[] = "V1.00"; //<---Version de codigo de contador
+char version[] = "V1.0B"; //<---Version de codigo de contador
 
 /////EEPROM///////////
 const int word_size = 10; // TAMA�O DE LOS DATOS EN EEPROM//antes 8

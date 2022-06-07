@@ -1,4 +1,4 @@
-CCS PCH C Compiler, Version 5.025, 24934               16-may.-22 12:03
+CCS PCH C Compiler, Version 5.025, 24934               30-may.-22 11:50
 
                Filename:   D:\PROYECTOS\TRANSPORTE\CONTADORES\3 en 1\BIA-DISPLAY\CONTADOR\SLAVE\CONTADOR_V5.02.lst
 
@@ -5043,7 +5043,7 @@ CCS PCH C Compiler, Version 5.025, 24934               16-may.-22 12:03
 ....................  
 .................... }; 
 ....................  
-.................... char version[] = "V1.00"; //<---Version de codigo de contador 
+.................... char version[] = "V1.0B"; //<---Version de codigo de contador 
 ....................  
 .................... /////EEPROM/////////// 
 .................... const int word_size = 10; // TAMA�O DE LOS DATOS EN EEPROM//antes 8 
@@ -5477,7 +5477,7 @@ CCS PCH C Compiler, Version 5.025, 24934               16-may.-22 12:03
 2C1E:  DATA 06,01
 2C20:  DATA 4C,56
 2C22:  DATA 31,2E
-2C24:  DATA 30,30
+2C24:  DATA 30,42
 2C26:  DATA 00,00
 2C28:  MOVLW  00
 2C2A:  MOVWF  FF8

@@ -454,10 +454,10 @@ ROM Allocation:
 0136  StrtolGO
 
 Project Directory:
-    D:\PROYECTOS\TRANSPORTE\ENCAPSULADO NUEVO\Contadores_V5.02\MASTER\
+    D:\PROYECTOS\TRANSPORTE\CONTADORES\SIMPLEV5.02\MASTER\
 
 Project Files:
-    CONTADOR_V5.02.c                                        [09-may.-22 11:01  CRC=549E2118]
+    CONTADOR_V5.02.c                                        [30-may.-22 11:31  CRC=549E2118]
     C:\Program Files (x86)\PICC\Devices\18F4580.h           [18-abr.-14 17:57  CRC=D6F2A36B]
     C:\Program Files (x86)\PICC\Drivers\stdlib.h            [08-jun.-11 15:39  CRC=0B6669CF]
     C:\Program Files (x86)\PICC\Drivers\stddef.h            [16-jul.-10 10:27  CRC=897CEC6C]

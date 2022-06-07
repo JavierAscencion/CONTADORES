@@ -15,18 +15,26 @@ Type=4
 2=
 
 [ProjectLog]
-Days=1
+Days=2
 D1=16-05-2022
 D1_L=5
 D1_L1=[41579]Started Editing.
 D1_L2=[42673]Stopped Editing.
 D1_L3=[42960]Started Editing.
 D1_L4=[43341]Stopped Editing.
-TotalEdit=15
+TotalEdit=16
 TotalDebug=0
 D1_E=15
 D1_D=0
 D1_L5=[45643]Project Closed.
+D2=30-05-2022
+D2_L=4
+D2_L1=[42637]Project Opened.
+D2_L2=[42648]Started Editing.
+D2_L3=[42668]Stopped Editing.
+D2_E=1
+D2_D=0
+D2_L4=[42668]Project Closed.
 [Units]
 Count=1
 1=CONTADOR_V5.02 (main)
