@@ -1,13 +1,18 @@
-String encontrarCaracter(String cadena, char caracter, byte inicioCadena){
+String encontrarCaracter(String cadena, char caracter, byte inicioCadena)
+{
   byte largoCadena = cadena.length();
-  String cadenaModificada="";
-  //USB_SERIAL.println(cadena);
-  for(byte i=inicioCadena; i < largoCadena; i++){
-    if(cadena[i] == caracter){
+  String cadenaModificada = "";
+  // USB_SERIAL.println(cadena);
+  for (byte i = inicioCadena; i < largoCadena; i++)
+  {
+    if (cadena[i] == caracter)
+    {
       cadena[i] = '\0';
       cadenaModificada += '\0';
       return cadenaModificada;
-    }else{
+    }
+    else
+    {
       cadenaModificada += cadena[i];
       cadena[i] = '\0';
     }
@@ -18,38 +23,53 @@ bool sincronizarRTC(String payloadReloj)
 {
   String axo = encontrarCaracter(payloadReloj, '-', 0);
   String mes = encontrarCaracter(payloadReloj, '-', axo.length());
-  String dia = encontrarCaracter(payloadReloj, ' ', axo.length()+mes.length());
+  String dia = encontrarCaracter(payloadReloj, ' ', axo.length() + mes.length());
   String hora = encontrarCaracter(payloadReloj, ':', axo.length() + mes.length() + dia.length());
-  String minuto = encontrarCaracter(payloadReloj, ':', axo.length() + mes.length() + dia.length() +  hora.length());      
+  String minuto = encontrarCaracter(payloadReloj, ':', axo.length() + mes.length() + dia.length() + hora.length());
   DateTime horaActual = rtc.now();
-  if(axo.toInt() == horaActual.year()){
-    if(mes.toInt() == horaActual.month()){
-      if(dia.toInt() == horaActual.day()){
-        if(hora.toInt() == horaActual.hour()){
-          if(minuto.toInt() == horaActual.minute()){
+  if (axo.toInt() == horaActual.year())
+  {
+    if (mes.toInt() == horaActual.month())
+    {
+      if (dia.toInt() == horaActual.day())
+      {
+        if (hora.toInt() == horaActual.hour())
+        {
+          if (minuto.toInt() == horaActual.minute())
+          {
             USB_SERIAL.println("Hora correcta");
             return true;
-          }else{
+          }
+          else
+          {
             rtc.adjust(DateTime(axo.toInt(), mes.toInt(), dia.toInt(), hora.toInt(), minuto.toInt()));
             USB_SERIAL.println("Cambiar minuto");
             return false;
           }
-        }else{
+        }
+        else
+        {
           rtc.adjust(DateTime(axo.toInt(), mes.toInt(), dia.toInt(), hora.toInt(), minuto.toInt()));
           USB_SERIAL.println("Cambiar hora");
           return false;
         }
-      }else{
+      }
+      else
+      {
         rtc.adjust(DateTime(axo.toInt(), mes.toInt(), dia.toInt(), hora.toInt(), minuto.toInt()));
         USB_SERIAL.println("Cambiar dia");
         return false;
       }
-    }else{
+    }
+    else
+    {
       rtc.adjust(DateTime(axo.toInt(), mes.toInt(), dia.toInt(), hora.toInt(), minuto.toInt()));
       USB_SERIAL.println("Cambiar mes");
       return false;
     }
-  }else{
+  }
+  else
+  {
     rtc.adjust(DateTime(axo.toInt(), mes.toInt(), dia.toInt(), hora.toInt(), minuto.toInt()));
     USB_SERIAL.println(horaActual.year());
     USB_SERIAL.println("Cambiar año");
@@ -60,8 +80,9 @@ bool sincronizarRTC(String payloadReloj)
 bool escribeVigenciaEEPROM(String anio, String mes, String dia)
 {
   char axoVigencia[5] = {0};
-  for(byte i=0; i<4; i++){
-    axoVigencia[i] = EEPROM.read(150+i);
+  for (byte i = 0; i < 4; i++)
+  {
+    axoVigencia[i] = EEPROM.read(150 + i);
   }
   String axoVi = String(axoVigencia);
   String mesVigencia = String(EEPROM.read(155));
@@ -69,10 +90,12 @@ bool escribeVigenciaEEPROM(String anio, String mes, String dia)
   axoVi += '\0';
   mesVigencia += '\0';
   diaVigencia += '\0';
-  if((axoVi != anio) || (mesVigencia != mes) || (diaVigencia != dia)){
+  if ((axoVi != anio) || (mesVigencia != mes) || (diaVigencia != dia))
+  {
     USB_SERIAL.println("Cambios en vigencia");
-    for(byte i=0; i<anio.length(); i++){
-      EEPROM.put(150+i, anio[i]);
+    for (byte i = 0; i < anio.length(); i++)
+    {
+      EEPROM.put(150 + i, anio[i]);
       EEPROM.commit();
     }
     EEPROM.put(155, mes.toInt());
@@ -81,7 +104,8 @@ bool escribeVigenciaEEPROM(String anio, String mes, String dia)
     EEPROM.commit();
     return true;
   }
-  else{
+  else
+  {
     USB_SERIAL.println("Vigencia sin cambios");
     return false;
   }

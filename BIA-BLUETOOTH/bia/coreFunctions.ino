@@ -202,8 +202,16 @@ void reconexionWifi()
       if (WiFi.SSID(i) == ssid)
       {
         WiFi.begin(ssid, pass);
+        Serial.println(WiFi.localIP());
 
         Serial.println("listo mDash");
+        //  /**************************NOMBRES PARA FUNCION DE ACTUALIZACION DE FIRMWARE*******************/
+        mDashBegin(DEVICE_PASSWORD);
+        Serial.println("Se inicio proceso de busqueda de firmware nuevo...");
+        Serial.println("nuevo firmware  4");
+        // arranquemDash = true;
+        // wifi_activo_by_bluetooth = true;
+        /////////////////////////////////////////////////////////
         // digitalWrite(LED_LINK,LOW);
         break;
       }
